@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script src="three.min.js"></script>
+    <script src="TDSLoader.js"></script>
+    <title>uwaaaaaaaaaa</title>
+  </head>
+  <body>
+
+
+
+    <script type="text/javascript">
+      console.log("unyaaaaa");
+      /* ここにWebGLの処理を記述 */
+      // ①シーンを作成
+      var scene = new THREE.Scene();
+
+      // ②カメラを作成
+      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+      camera.position.z = 5;
+
+      // ③メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
+      const loader = new THREE.TDSLoader();
+      // テクスチャーのパスを指定
+      loader.setPath('./models/3ds/portalgun/textures/');
+      // 3dsファイルのパスを指定
+      loader.load('./models/3ds/portalgun/portalgun.3ds',  (object) => {
+        // 読み込み後に3D空間に追加
+        scene.add(object);
+      });
+
+      // ④シーンに追加
+
+
+      // ⑤レンダラに渡す
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+
+      // ⑥＜body＞へ追加し、表示
+      document.body.appendChild(renderer.domElement);
+
+      // ⑦アニメーションさせる
+      var animate = function(){
+      requestAnimationFrame(animate);
+      object.rotation.x += 0.05;
+      object.rotation.y += 0.06;
+      renderer.render( scene, camera );
+      };
+      animate();
+    </script>
+  </body>
+</html> -->
+
+
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <script src="three.min.js"></script>
+  <script src="OrbitControls.js"></script>
+  <script src="TDSLoader.js"></script>
+
+  <script>
+    // ページの読み込みを待つ
+    window.addEventListener('load', init);
+    function init() {
+      // サイズを指定
+      const width = 960;
+      const height = 540;
+      // レンダラーを作成
+      const renderer = new THREE.WebGLRenderer({
+        canvas: document.querySelector('#myCanvas'),
+      });
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(width, height);
+      // シーンを作成
+      const scene = new THREE.Scene();
+      // カメラを作成
+      const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
+      // カメラの初期座標を設定
+      camera.position.set(0, 0, 5);
+      // カメラコントローラーを作成
+      const controls = new THREE.OrbitControls(camera);
+      // 平行光源を作成
+      const directionalLight = new THREE.DirectionalLight(0xFFFFFF);
+      directionalLight.position.set(1, 1, 1);
+      scene.add(directionalLight);
+      // 環境光を追加
+      const ambientLight = new THREE.AmbientLight(0xFFFFFF,1.0);
+      scene.add(ambientLight);
+
+      // 3DS形式のモデルデータを読み込む
+      const loader = new THREE.TDSLoader();
+      // テクスチャーのパスを指定
+      loader.setPath('models/3ds/portalgun/textures/');
+      // 3dsファイルのパスを指定
+      loader.load('models/3ds/portalgun/portalgun.3ds',  (object) => {
+        // 読み込み後に3D空間に追加
+        scene.add(object);
+      });
+      tick();
+      renderer.setClearColor(0xf0f8ff, 1.0);    //薄青色
+      // 毎フレーム時に実行されるループイベントです
+      function tick() {
+        // レンダリング
+        renderer.render(scene, camera);
+
+        requestAnimationFrame(tick);
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas"></canvas>
+</body>
+</html>
