@@ -1,0 +1,19 @@
+body{
+  background-color: #fff8dc;
+}
+
+#top-img{
+  position: fixed;
+  height: 60%;
+  left: 25%;
+  top: 10%;
+}
+
+#top-button{
+  position: fixed;
+  height: 15%;
+  left: 35%;
+  top: 75%;
+  padding: 5px;
+  border: 2px black solid;
+}
