@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <!-- 全ての画面サイズには対応できないが、ある程度の規格には対応,縦表示,横表示に応じて画面レイアウトを調整している -->
+  <link rel="stylesheet" href="./css/3dmodels-list-sp.css" media="screen and (max-width:450px)">
+  <link rel="stylesheet" href="./css/3dmodels-list-pc.css" media="screen and (min-width:450px)">
+  <title>3Dモデル一覧</title>
+</head>
+<body>
+  <!-- さり気なくリンクを用意しておく　Top画像はダミーデータ　後に差し替え予定 -->
+  <div id="pagetop-div">
+    <h1>
+      <a href="./index.html"><img src="./images/topicon.png" alt="トップアイコン"></a>
+      <a href="./camera.html"><img src="./images/cameraicon.png" alt="カメラアイコン"></a>
+      3Dモデル一覧
+    </h1>
+  </div>
+  <hr/>
+  <h2>1階に展示</h2>
+
+  <!-- 3Dモデル対応機種が増えたら<h3>タグからドロップダウンメニューに変更 -->
+  <!-- プロジェクト演習3では3機種のみ対応,レイアウトが見にくくなる関係から
+  ドロップダウンメニューは採用せず、素で3機種表示させる。 -->
+  <h3>大型・汎用コンピュータ</h3>
+  <ol>
+    <!-- リンク先はダミーデータ　後に差し替え予定 -->
+    <li>IBM　<a href="./demo-pc.html"><strong>IBM370-138</strong></a></li>
+  </ol>
+  <br>
+
+  <!-- 3Dモデル対応機種が増えたら<h3>タグからドロップダウンメニューに変更 -->
+  <h3>パーソナルコンピュータ</h3>
+  <ol>
+    <!-- リンク先は全てダミーデータ　後に差し替え予定 -->
+    <li>シャープ　<a href="./demo-pc.html"><strong>MZ-80K</strong></a></li>
+    <li>東芝　<a href="./demo-pc.html"><strong>Dynabook 386</strong></a></li>
+  </ol>
+
+  <!-- 簡易地図に関してはダミーデータ　後に実装予定 -->
+  <img src="./images/map01.png" id="map01" alt="簡易地図">
+
+  <hr/>
+  <div id="copyrights">
+    <h6>All contents copyright (C) kcg.edu.<br>
+      Copyrights Io-KCGProject03 Inc. All Rights Reserved.</h6>
+    </div>
+
+    <script type="text/javascript">
+    </script>
+
+  </body>
+  </html>

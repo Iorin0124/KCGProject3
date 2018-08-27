@@ -1,0 +1,24 @@
+/* TopページのCSS(主に横画面) */
+
+body{
+  /* カラーは後から変更可　その場合、top-imgを背景透過する必要あり */
+  background-color: #fff8dc;
+}
+
+/* Top画像 */
+#top-img{
+  position: fixed;
+  height: 60%;
+  left: 25%;
+  top: 10%;
+}
+
+/* 撮影開始ボタン */
+#start-button{
+  position: fixed;
+  height: 15%;
+  left: 35%;
+  top: 75%;
+  padding: 5px;
+  border: 2px black solid;
+}
