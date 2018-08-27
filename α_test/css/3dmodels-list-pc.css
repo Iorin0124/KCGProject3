@@ -1,0 +1,26 @@
+/*3Dモデル一覧表示のCSS(主に横画面)*/
+
+/* Tpoページに戻るアイコンとカメラ画面に戻るアイコン */
+#pagetop-div img{
+  width: 5%;
+  display: table-cell inline;
+  vertical-align: middle;
+}
+
+/* 簡易地図 */
+#map01{
+  position: relative;
+  width: 75%;
+}
+
+/* コピーライト */
+#copyrights{
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+}
+
+/* 罫線,コピーライトのカラー */
+h6,hr{
+  color: #08088A;
+}
