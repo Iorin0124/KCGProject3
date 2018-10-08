@@ -1,0 +1,89 @@
+/*3Dモデル一覧表示のCSS(主に縦画面)*/
+
+/* ヘッダー,フッター,メニューバー設定 */
+#menu-div{
+  background-color: #DFE5FF;
+  text-align: center;
+}
+
+/* Tpoページに戻るアイコンとカメラ画面に戻るアイコン */
+#menu-div img{
+  width: 8%;
+  display: table-cell inline;
+  vertical-align: middle;
+}
+
+/* 簡易地図 */
+#map01{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 75%;
+}
+
+/* コピーライト */
+#copyrights{
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+}
+
+/* 罫線,コピーライトのカラー */
+h6,hr{
+  color: #08088A;
+}
+
+/* ここからアコーディオンメニュー */
+.accordion > dl > dt {
+    padding: 0px 10px;
+}
+.accordion > dl > dt, .accordion > dl > dd > ul > ol > li, .accordion > ul > li {
+    border-bottom: 1px solid #BDBDBD;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.accordion > dl > dt:after {
+    content: "+";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    line-height: initial;
+    margin: -14px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.accordion > dl > dt.dopen:after {
+    content: "-";
+}
+.accordion > dl > dd {
+    background-color: #D7EEFF;
+    display: none;
+}
+.accordion > dl > dt, .accordion > dl > dd > ul > ol > li, .accordion > ol > li {
+    border-bottom: 1px solid #BDBDBD;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.accordion >dl > dd > ul > ol > li:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin: -4px 0px 0px;
+}
+.accordion > dl > dd a, .accordion > ul > ol > li a {
+    display: block;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+/* ここまでアコーディオンメニュー */

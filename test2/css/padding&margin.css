@@ -1,0 +1,22 @@
+/* 余白調整用クラス */
+.pad-01{
+  padding: 2px;
+}
+.padleft-01{
+  padding-left: 50px;
+}
+.padleft-02{
+  padding-left: 30px;
+}
+.padright-01{
+  padding-right: 2px;
+}
+.margin-00{
+  margin: 0px;
+}
+.margintop-01{
+  margin-top: 5px;
+}
+.center{
+  text-align: center;
+}

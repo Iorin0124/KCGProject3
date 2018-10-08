@@ -1,0 +1,28 @@
+/* ヘッダー,フッター,メニューバー設定 */
+#menu-div{
+  background-color: #DFE5FF;
+  text-align: center;
+}
+
+/* Tpoページに戻るアイコンとカメラ画面に戻るアイコン */
+#menu-div img{
+  width: 8%;
+  display: table-cell inline;
+  vertical-align: middle;
+}
+
+
+
+
+
+/* コピーライト */
+#copyrights{
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+}
+
+/* 罫線,コピーライトのカラー */
+h6,hr{
+  color: #08088A;
+}
