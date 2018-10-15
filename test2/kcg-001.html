@@ -1,0 +1,255 @@
+<!--  kcg-001 = MZ-80K (SHARP：パーソナルコンピュータ) -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!-- 全ての画面サイズには対応できないが、ある程度の規格には対応,縦表示,横表示に応じて画面レイアウトを調整している -->
+  <link rel="stylesheet" href="./css/padding&margin.css">
+  <link rel="stylesheet" href="./css/drawing-sp.css" media="screen and (max-width:450px)">
+  <link rel="stylesheet" href="./css/drawing-pc.css" media="screen and (min-width:451px)">
+  <link rel="stylesheet" href="./css/drawer.min.css">
+  <script src="./js/three.min.js"></script>
+  <script src="./js/OrbitControls.js"></script>
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/iscroll.js"></script>
+  <script src="./js/drawer.min.js"></script>
+  <title>MZ-80K</title>
+</head>
+
+<body class="drawer drawer--left">
+
+  <!-- 操作説明 -->
+  <h3 id="title" class="margin-00 center padleft-01 bg-cream">KCGコンピュータミュージアム</h2>
+  <div id="divspace01">
+    <input type="radio" class="checkbox" checked="checked" id="radio-manual">
+    <label id="op_label" for="radio-manual">操作方法</label>
+    <div id="operation-manual">
+      <p>操作方法<br>
+        スクロールで回転<br>
+        ピンチイン,ピンチアウトで拡大縮小<br>
+        左上のメニューアイコンから各種機能へ</p>
+      </div>
+    </div>
+
+    <!-- パソコンの説明 -->
+    <div id="divspace02">
+      <input type="radio" class="checkbox" id="radio-description">
+      <label id="desc_label" for="radio-description">説明</label>
+      <div id="description">
+        <p>メーカー：SHARP　型番：MZ-80K<br />
+          2013年3月 情報処理技術遺産認定<br />
+          詳細は後日追加。<br /><hr />
+          情報の日時：2017/3/16　<br />
+          <a href="reference-book.html">出典：パーソナルコンピュータ博物史</a><br />
+          <a href="http://www.sharp.co.jp/">販売メーカー：SHARPへ</a><br />
+          <a href="https://ja.wikipedia.org/wiki/MZ-80">Wikipedia：MZ-80K</a>
+        </p>
+        </div>
+      </div>
+
+      <!-- 非表示 -->
+      <div id="divspace03">
+        <input type="radio" class="checkbox" id="radio-hide">
+        <label id="hide_label" for="radio-hide">非表示</label>
+      </div>
+
+      <!-- ドロワーメニュー -->
+      <button type="button" class="drawer-toggle drawer-hamburger">
+        <span class="sr-only">toggle navigation</span>
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      <nav class="drawer-nav">
+        <ul class="drawer-menu" id="drawer-space">
+          <li><input type="radio" id="radio-bgcolor1" name="radio_bgcolor" value="#fff8dc" checked="checked"><label for="radio-bgcolor1" id="bgcolor1">背景色1</label></li>
+          <li><input type="radio" id="radio-bgcolor2" name="radio_bgcolor" value="#f0f8ff"><label for="radio-bgcolor2" id="bgcolor2">背景色2</label></li>
+          <li><input type="radio" id="radio-bgcolor3" name="radio_bgcolor" value="#000000"><label for="radio-bgcolor3" id="bgcolor3">背景色3</label></li>
+          <li><a class="link" href="./camera.html">スキャン</a></li>
+          <li><a class="link" href="./3dmodels-list.html">所蔵一覧</a></li>
+        </ul>
+        <!-- 表示義務は無し
+        <h6>jQueryプラグイン：<a href="http://git.blivesta.com/drawer/">Drawer</a></h6> -->
+      </nav>
+      <!-- ドロワーメニューここまで -->
+
+
+      <script type="text/javascript">
+      //チェックボックスの複数選択不可化
+      $(".checkbox").on("click", function(){
+        $('.checkbox').prop('checked', false);
+        $(this).prop('checked', true);
+      });
+
+      //ドロワーメニュー
+      $(document).ready(function() {
+        $(".drawer").drawer();
+      });
+      // ドロワーメニューここまで
+
+
+      //確認用
+      // console.log("フラウザの外側の幅：" + window.outerWidth + "ピクセル<br>");
+      // console.log("フラウザの外側の高さ：" + window.outerHeight + "ピクセル<br>");
+      // console.log("フラウザのコンテンツ領域の幅：" + window.innerWidth + "ピクセル<br>");
+      // console.log("フラウザのコンテンツ領域の高さ：" + window.innerHeight + "ピクセル<br>");
+
+
+      /* ここからWebGLの処理を記述 */
+      //シーンを作成
+      var scene = new THREE.Scene();
+
+      //カメラを作成
+      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+      camera.position.z = 9;
+
+      //カメラコントローラーを作成
+      const controls = new THREE.OrbitControls(camera);
+
+      //ここから3Dモデル生成のコード
+      //物体1(PC上部1)
+      //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
+      var geometry_1 = new THREE.BoxGeometry( 3.5, 2.5, 3.7);
+      var materials_1 =[];
+      materials_1[0] = new THREE.MeshBasicMaterial({color:0xcc0000});
+      materials_1[1] = new THREE.MeshBasicMaterial({color:0xcc0000});
+      materials_1[2] = new THREE.MeshBasicMaterial({color:0xcc0000});
+      materials_1[3] = new THREE.MeshBasicMaterial({color:0xcc0000});
+      materials_1[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_up_5.jpg")});
+      materials_1[5] = new THREE.MeshBasicMaterial({color:0xcc0000});
+      var material_1 = new THREE.MeshFaceMaterial(materials_1);
+      var mesh_1 = new THREE.Mesh( geometry_1, material_1 );
+      //表示位置の設定
+      mesh_1.position.set(0,0,0);
+      //シーンに追加
+      scene.add(mesh_1);
+
+      //物体2(PC上部2)
+      //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
+      var geometry_2 = new THREE.BoxGeometry( 2.4, 0.8, 3.7);
+      var materials_2 =[];
+      materials_2[0] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_1.jpg")});
+      materials_2[1] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_2.jpg")});
+      materials_2[2] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_3.jpg")});
+      materials_2[3] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_4.jpg")});
+      materials_2[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_5.jpg")});
+      materials_2[5] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_6.jpg")});
+      var material_2 = new THREE.MeshFaceMaterial(materials_2);
+      var mesh_2 = new THREE.Mesh( geometry_2, material_2 );
+      //表示位置の設定
+      mesh_2.position.set(1.7,0.8,-1.3);
+      //シーンに追加
+      scene.add(mesh_2);
+
+      //物体3(PC下部)
+      //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
+      var geometry_3 = new THREE.BoxGeometry( 6, 0.8, 6.3);
+      var materials_3 =[];
+      materials_3[0] = new THREE.MeshBasicMaterial({color:0xcccc99});
+      materials_3[1] = new THREE.MeshBasicMaterial({color:0xcccc99});
+      materials_3[2] = new THREE.MeshBasicMaterial({color:0xcccc99});
+      materials_3[3] = new THREE.MeshBasicMaterial({color:0xccccc99});
+      materials_3[4] = new THREE.MeshBasicMaterial({color:0xccccc99});
+      materials_3[5] = new THREE.MeshBasicMaterial({color:0xccccc99});
+      var material_3 = new THREE.MeshFaceMaterial(materials_3);
+      var mesh_3 = new THREE.Mesh( geometry_3, material_3 );
+      //表示位置の設定
+      mesh_1.position.set(-1.2,1.65,-1.3);
+      //シーンに追加
+      scene.add(mesh_3);
+      //ここまでが3Dモデル生成のコード　生成物により変更
+
+
+      //レンダラに渡す
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize( window.innerWidth,window.innerHeight );
+      renderer.setClearColor(0xefff8dc, 1.0);  //初期 クリーム色
+
+      //bodyへ追加し、表示
+      document.body.appendChild(renderer.domElement);
+      //console.log(renderer.domElement);
+      //アニメーションさせる
+      var animate = function(){
+        requestAnimationFrame(animate);
+        // mesh.rotation.x += 0.05;
+        // mesh.rotation.y += 0.06;
+        renderer.render( scene, camera );
+      };
+      animate();
+      //３Dモデル作成,描画に関する項目ここまで
+
+
+      //画面回転等でリサイズがあった場合の挙動
+      //初期化
+      onResize();
+
+      //リサイズイベント発生時に実行
+      window.addEventListener('resize', onResize);
+
+      function onResize() {  // サイズを取得
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+
+        // レンダラのサイズを調整する
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(width, height);
+
+        // カメラのアスペクト比を正す
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      }
+      //画面サイズ変更に関する項目ここまで
+
+
+      //背景色が変更された時の挙動
+      $(function(){
+        $('input[name="radio_bgcolor"]:radio').change(function(){
+          var radio_color = $(this).val();
+          if(radio_color == "#fff8dc"){
+            $("#title").removeClass("bg-lightblue")
+            $("#title").removeClass("bg-black")
+            $("#title").addClass("bg-cream")
+          }
+          if(radio_color == "#f0f8ff"){
+            $("#title").removeClass("bg-cream")
+            $("#title").removeClass("bg-black")
+            $("#title").addClass("bg-lightblue")
+          }
+          console.log();
+          renderer.setClearColor(radio_color, 1.0);  //変更された背景色
+          if(radio_color == "#000000"){   //背景色が黒の時は文字色を白にする
+            $("#operation-manual").addClass("whitecoolor");
+            $("#description").addClass("whitecoolor");
+            $("#op_label").addClass("whitecoolor");
+            $("#desc_label").addClass("whitecoolor");
+            $("#hide_label").addClass("whitecoolor");
+            $("#title").addClass("whitecoolor");
+            $("#title").removeClass("bg-cream")
+            $("#title").removeClass("bg-lightblue")
+            $("#title").addClass("bg-black");
+          }else{  //それ以外の色に変わったらクラスを消す
+            $("#operation-manual").removeClass("whitecoolor");
+            $("#description").removeClass("whitecoolor");
+            $("#op_label").removeClass("whitecoolor");
+            $("#desc_label").removeClass("whitecoolor");
+            $("#hide_label").removeClass("whitecoolor");
+            $("#title").removeClass("whitecoolor");
+          }
+        })
+      })
+      //背景色に関する項目ここまで
+
+
+      </script>
+
+    </body>
+    </html>
+
+    <!-- 注意事項
+    おそらくGoogleChromeのクロスドメイン制約のせいかと思われるが、
+    GoogleChromeでは3Dモデルに張り付けた画像が表示されない。
+    FirefoxやEdge,IEでは表示される為、そちらでの表示をお願いする。
+    又は、GoogleChromeの設定変更をする(セキュリティを外す設定)と表示されるかと思う。(未確認)
+    また、サーバを立ててそこに画像等を放り込んでやればクロスドメイン制約を受けずに
+    表示されるのではないかという情報もある為、β版テストで実際にやってみる予定である。
+  -->

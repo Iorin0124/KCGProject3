@@ -1,0 +1,5 @@
+https化に参考にしたページ
+http://dotnsf.blog.jp/archives/3181024.html
+
+証明書の取得
+https://www.server-world.info/query?os=CentOS_7&p=ssl&f=2
