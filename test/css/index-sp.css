@@ -5,20 +5,60 @@ body{
   background-color: #fff8dc;
 }
 
-/* Top画像 */
-#top-img{
-  position: fixed;
-  width: 80%;
-  left: 8%;
-  top: 20%;
+@media screen and (max-width: 530px) {
+	/* Top画像 */
+	#top-img{
+	position: fixed;
+	width: 80%;
+	left: 8%;
+	top: 20%;
+	}
+	/* 撮影開始ボタン */
+	#start-button{
+	position: fixed;
+	width: 40%;
+	left: 28%;
+	top: 60%;
+	padding: 5px;
+	border: 2px black solid;
+	}
 }
 
-/* 撮影開始ボタン */
-#start-button{
-  position: fixed;
-  width: 40%;
-  left: 28%;
-  top: 60%;
-  padding: 5px;
-  border: 2px black solid;
+@media screen and (min-width: 531px) {
+	/* Top画像 */
+	#top-img{
+	position: fixed;
+	width: 40%;
+	left: 28%;
+	top: 10%;
+	}
+	/* 撮影開始ボタン */
+	#start-button{
+	position: fixed;
+	width: 20%;
+	left: 38%;
+	top: 75%;
+	padding: 5px;
+	border: 2px black solid;
+	}
 }
+
+@media screen and  (min-width: 599px) and (max-width: 600px)  {
+	/* Top画像 */
+	#top-img{
+	position: fixed;
+	width: 80%;
+	left: 8%;
+	top: 20%;
+	}
+	/* 撮影開始ボタン */
+	#start-button{
+	position: fixed;
+	width: 40%;
+	left: 28%;
+	top: 65%;
+	padding: 5px;
+	border: 2px black solid;
+	}
+}
+

@@ -84,6 +84,11 @@ input[type=radio]{
   visibility: hidden;
 }
 
+/* 背景色が黒に変更された時に各文字色を白にするクラス */
+.whitecoolor{
+  color: white;
+}
+
 /* 画面上の操作説明にチェックが入った場合、画面下に操作説明を出す */
 #divspace01 input[type="checkbox"]:checked ~ #operation-manual{
   visibility: visible;
