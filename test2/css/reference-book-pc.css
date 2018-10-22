@@ -4,13 +4,20 @@
   text-align: center;
 }
 
-/* Tpoページに戻るアイコンとカメラ画面に戻るアイコン */
-#menu-div img{
-  width: 30px;
-  display: table-cell inline;
-  vertical-align: middle;
+/* 横画面 */
+@media screen and (orientation: landscape) {
+  #img-div img{
+    border: solid 1px #08088A;
+    width:30%;
+  }
 }
-
+/* 縦画面 */
+@media screen and (orientation: portrait) {
+  #img-div img{
+    border: solid 1px #08088A;
+    width: 48%;
+  }
+}
 
 
 

@@ -22,29 +22,34 @@
 
   <!-- 操作説明 -->
   <h3 id="title" class="margin-00 center padleft-01 bg-cream">KCGコンピュータミュージアム</h2>
-  <div id="divspace01">
-    <input type="radio" class="checkbox" checked="checked" id="radio-manual">
-    <label id="op_label" for="radio-manual">操作方法</label>
-    <div id="operation-manual">
-      <p>操作方法<br>
-        スクロールで回転<br>
-        ピンチイン,ピンチアウトで拡大縮小<br>
-        左上のメニューアイコンから各種機能へ</p>
+    <div id="divspace01">
+      <input type="radio" class="checkbox" checked="checked" id="radio-manual">
+      <label id="op_label" for="radio-manual">操作方法</label>
+      <div id="operation-manual">
+        <p>操作方法<br>
+          スクロールで回転<br>
+          ピンチイン,ピンチアウトで拡大縮小<br>
+          左上のメニューアイコンから各種機能へ</p>
+        </div>
       </div>
-    </div>
 
-    <!-- パソコンの説明 -->
-    <div id="divspace02">
-      <input type="radio" class="checkbox" id="radio-description">
-      <label id="desc_label" for="radio-description">説明</label>
-      <div id="description">
-        <p>メーカー：IBM　型番：IBM370/138<br />
-          <br />
-          詳細は後日追加。<br /><hr />
-          情報の日時：2017/3/16　<br />
-          <a href="#">販売メーカー：IBMへ</a><br />
-          <a href="reference-book.html">出典：パーソナルコンピュータ博物史</a>
-        </p>
+      <!-- パソコンの説明 -->
+      <div id="divspace02">
+        <input type="radio" class="checkbox" id="radio-description">
+        <label id="desc_label" for="radio-description">説明</label>
+        <div id="description">
+          <p>発売年：19XX年<br />
+            メーカー：IBM　型番：IBM370/138<br />
+            CPU：　メモリ：<br />
+            <hr />
+            IBM370/138は大型・汎用コンピュータである。<br />
+            <hr />
+            情報の日時：2018/10/15　<br />
+            <a href="https://www.kcg.ac.jp/museum/computer/mainframe_computers/ibm.html">kcgコンピュータミュージアム：IBM370/138</a><br />
+            <a href="https://www.ibm.com/jp-ja/">販売メーカー：IBMへ</a><br />
+            <a href="https://ja.wikipedia.org/wiki/System/370">Wikipedia：System/370</a>
+          </p>
+
         </div>
       </div>
 
@@ -110,54 +115,19 @@
       //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
       var geometry_1 = new THREE.BoxGeometry( 3.5, 2.5, 3.7);
       var materials_1 =[];
-      materials_1[0] = new THREE.MeshBasicMaterial({color:0xcc0000});
-      materials_1[1] = new THREE.MeshBasicMaterial({color:0xcc0000});
-      materials_1[2] = new THREE.MeshBasicMaterial({color:0xcc0000});
-      materials_1[3] = new THREE.MeshBasicMaterial({color:0xcc0000});
-      materials_1[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_up_5.jpg")});
-      materials_1[5] = new THREE.MeshBasicMaterial({color:0xcc0000});
+      materials_1[0] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/rightside-tex.jpg")});
+      materials_1[1] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/leftside-tex.jpg")});
+      materials_1[2] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/upperside-tex.jpg")});
+      materials_1[3] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/underside-tex.jpg")});
+      materials_1[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/frontside-tex.jpg")});
+      materials_1[5] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/behindside-tex.jpg")});
       var material_1 = new THREE.MeshFaceMaterial(materials_1);
       var mesh_1 = new THREE.Mesh( geometry_1, material_1 );
       //表示位置の設定
-      mesh_1.position.set(0,0,0);
+      mesh_1.position.set(0,1,0);
       //シーンに追加
       scene.add(mesh_1);
-
-      //物体2(PC上部2)
-      //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
-      var geometry_2 = new THREE.BoxGeometry( 2.4, 0.8, 3.7);
-      var materials_2 =[];
-      materials_2[0] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_1.jpg")});
-      materials_2[1] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_2.jpg")});
-      materials_2[2] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_3.jpg")});
-      materials_2[3] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_4.jpg")});
-      materials_2[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_5.jpg")});
-      materials_2[5] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_6.jpg")});
-      var material_2 = new THREE.MeshFaceMaterial(materials_2);
-      var mesh_2 = new THREE.Mesh( geometry_2, material_2 );
-      //表示位置の設定
-      mesh_2.position.set(1.7,0.8,-1.3);
-      //シーンに追加
-      scene.add(mesh_2);
-
-      //物体3(PC下部)
-      //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
-      var geometry_3 = new THREE.BoxGeometry( 6, 0.8, 6.3);
-      var materials_3 =[];
-      materials_3[0] = new THREE.MeshBasicMaterial({color:0xcccc99});
-      materials_3[1] = new THREE.MeshBasicMaterial({color:0xcccc99});
-      materials_3[2] = new THREE.MeshBasicMaterial({color:0xcccc99});
-      materials_3[3] = new THREE.MeshBasicMaterial({color:0xccccc99});
-      materials_3[4] = new THREE.MeshBasicMaterial({color:0xccccc99});
-      materials_3[5] = new THREE.MeshBasicMaterial({color:0xccccc99});
-      var material_3 = new THREE.MeshFaceMaterial(materials_3);
-      var mesh_3 = new THREE.Mesh( geometry_3, material_3 );
-      //表示位置の設定
-      mesh_1.position.set(-1.2,1.65,-1.3);
-      //シーンに追加
-      scene.add(mesh_3);
       //ここまでが3Dモデル生成のコード　生成物により変更
-
 
       //レンダラに渡す
       var renderer = new THREE.WebGLRenderer();
