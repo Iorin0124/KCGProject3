@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script src="./js/three.min.js"></script>
+    <script src="./js/OrbitControls.js"></script>
+    <title>uwaaaaaaaaaa</title>
+  </head>
+  <body>
+  <!-- 基本の立方体のモデル -->
+
+
+    <script type="text/javascript">
+      console.log("unyaaaaa");
+      /* ここにWebGLの処理を記述 */
+      // ①シーンを作成
+      var scene = new THREE.Scene();
+
+      // ②カメラを作成
+      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+      camera.position.z = 5;
+
+      // カメラコントローラーを作成
+      const controls = new THREE.OrbitControls(camera);
+
+      // ③メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
+      var geometry = new THREE.BoxGeometry( 1, 1, 1);
+      var material = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
+      var mesh = new THREE.Mesh( geometry, material );
+
+      // ④シーンに追加
+      scene.add( mesh );
+
+      // ⑤レンダラに渡す
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+
+      // ⑥＜body＞へ追加し、表示
+      document.body.appendChild(renderer.domElement);
+
+      // ⑦アニメーションさせる
+      var animate = function(){
+      requestAnimationFrame(animate);
+      // mesh.rotation.x += 0.05;
+      // mesh.rotation.y += 0.06;
+      renderer.render( scene, camera );
+      };
+      animate();
+    </script>
+  </body>
+</html>
