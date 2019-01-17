@@ -10,12 +10,18 @@
     border: solid 1px #08088A;
     width: 15%;
   }
+  .carousel img{
+    width: 50%;
+  }
 }
 /* 縦画面 */
 @media screen and (orientation: portrait) {
   #img-div img{
     border: solid 1px #08088A;
     width: 48%;
+  }
+  .carousel img{
+    width: 80%;
   }
 }
 
