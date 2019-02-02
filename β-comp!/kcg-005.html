@@ -4,11 +4,11 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 全ての画面サイズには対応できないが、ある程度の規格には対応,縦表示,横表示に応じて画面レイアウトを調整している -->
   <link rel="stylesheet" href="./css/padding&margin.css">
-  <link rel="stylesheet" href="./css/drawing-sp.css" media="screen and (max-width:450px)">
-  <link rel="stylesheet" href="./css/drawing-pc.css" media="screen and (min-width:451px)">
+  <link rel="stylesheet" href="./css/drawing-sp.css" media="screen and (max-width:980px)">
+  <link rel="stylesheet" href="./css/drawing-pc.css" media="screen and (min-width:981px)">
   <link rel="stylesheet" href="./css/drawer.min.css">
   <script src="./js/three.min.js"></script>
   <script src="./js/OrbitControls.js"></script>
@@ -21,75 +21,91 @@
 <body class="drawer drawer--left">
 
   <!-- 操作説明 -->
-  <h3 id="title" class="margin-00 center padleft-01 bg-cream">KCGコンピュータミュージアム</h3>
-    <div id="divspace01">
-      <input type="radio" class="checkbox" checked="checked" id="radio-manual">
-      <label id="op_label" for="radio-manual">操作方法</label>
-      <div id="operation-manual">
-        <p>操作方法<br>
-          スクロールで回転<br>
-          ピンチイン,ピンチアウトで拡大縮小<br>
-          左上のメニューアイコンから各種機能へ</p>
-        </div>
+  <h3 id="title" class="margin-00 center padleft-01 bg-cream">京の情報処理技術遺産</h3>
+  <div id="divspace01">
+    <input type="radio" class="checkbox" checked="checked" id="radio-manual" name="radio">
+    <label id="op_label" for="radio-manual">操作方法</label>
+    <div id="operation-manual">
+      <p>操作方法<br>
+        スクロールで回転<br>
+        ピンチイン,ピンチアウトで拡大縮小<br>
+        2本指スクロールで位置移動<br>
+        左上のメニューアイコンから各種機能へ</p>
       </div>
+    </div>
 
-      <!-- パソコンの説明 -->
-      <div id="divspace02">
-        <input type="radio" class="checkbox" id="radio-description">
-        <label id="desc_label" for="radio-description">説明</label>
-        <div id="description">
-          <p>発売年：19XX年<br />
-            メーカー：東芝　型番：V386/20<br />
-            CPU：i80386SX　メモリ：最大10MB<br />
-            <hr />
-            Dynabook386は持ち運びが可能なラップトップパソコンシリーズである。<br />
-            VGA(640×480ドット)対応液晶ディスプレイを搭載したラップトップパソコン。
-            Dynabookの登場は家庭でのラップトップパソコンが普及するきっかけをつくった。<br />
-            <hr />
-            情報の日時：2017/3/15<br />
-            <a href="reference-book.html">出典：パーソナルコンピュータ博物史</a><br />
-            <a href="http://museum.ipsj.or.jp/computer/personal/0065.html">コンピュータ博物館：DynaBook V386</a><br />
-            <a href="https://www.toshiba.co.jp/">販売メーカー：東芝へ</a><br />
-            <a href="https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%96%E3%83%83%E3%82%AF_(%E6%9D%B1%E8%8A%9D)">Wikipedia：Dynabookシリーズ</a>
-          </p>
-        </div>
+    <!-- パソコンの説明 -->
+    <div id="divspace02">
+      <input type="radio" class="checkbox" id="radio-description" name="radio">
+      <label id="desc_label" for="radio-description">説明</label>
+      <div id="description">
+        <p><strong>OKITAC-4300C</strong><br />
+          XXXXXXXXXXXXX<br />
+          XXXXXXXXXXXXX<br />
+          <a href="https://www.kcg.ac.jp/museum/computer/mainframe_computers/ibm.html">kcgコンピュータミュージアム：IBM 360/40</a><br />
+          <!-- <a href="http://museum.ipsj.or.jp">情報処理学会 コンピュータ博物館：ページ無し</a><br /> -->
+          <a href="https://www.ibm.com/jp-ja/?lnk=m">メーカー：日本IBM</a><br />
+          <a href="https://www.ibm.com/us-en/?lnk=m">メーカー：IBM United Status</a><br />
+        </p>
       </div>
+    </div>
 
-      <!-- 非表示 -->
-      <div id="divspace03">
-        <input type="radio" class="checkbox" id="radio-hide">
-        <label id="hide_label" for="radio-hide">非表示</label>
-      </div>
+    <!-- 非表示 -->
+    <div id="divspace03">
+      <input type="radio" class="checkbox" id="radio-hide" name="radio">
+      <label id="hide_label" for="radio-hide">非表示</label>
+    </div>
 
-      <!-- ドロワーメニュー -->
-      <button type="button" class="drawer-toggle drawer-hamburger">
-        <span class="sr-only">toggle navigation</span>
-        <span class="drawer-hamburger-icon"></span>
-      </button>
-      <nav class="drawer-nav">
-        <ul class="drawer-menu" id="drawer-space">
-          <li><input type="radio" id="radio-bgcolor1" name="radio_bgcolor" value="#fff8dc" checked="checked"><label for="radio-bgcolor1" id="bgcolor1">背景色1</label></li>
-          <li><input type="radio" id="radio-bgcolor2" name="radio_bgcolor" value="#f0f8ff"><label for="radio-bgcolor2" id="bgcolor2">背景色2</label></li>
-          <li><input type="radio" id="radio-bgcolor3" name="radio_bgcolor" value="#000000"><label for="radio-bgcolor3" id="bgcolor3">背景色3</label></li>
-          <!-- <li><a class="link" href="./camera.html">スキャン</a></li> -->
-          <li><a class="link" href="./3dmodels-list.html">所蔵一覧</a></li>
-          <li><a class="link" href="./index.html">Top page</a></li>
-        </ul>
-        <!-- 表示義務は無し
-        <h6>jQueryプラグイン：<a href="http://git.blivesta.com/drawer/">Drawer</a></h6> -->
-        <h6 class="center">All contents copyright (C) kcg.edu.<br>
-          Copyrights Io,Mo-KCGProject03 Inc.<br>
-          All Rights Reserved.</h6>
+    <!-- ドロワーメニュー -->
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav">
+      <ul class="drawer-menu" id="drawer-space">
+        <li><input type="radio" id="radio-bgcolor1" name="radio_bgcolor" value="#fff8dc" checked="checked"><label for="radio-bgcolor1" id="bgcolor1">背景色1</label></li>
+        <li><input type="radio" id="radio-bgcolor2" name="radio_bgcolor" value="#f0f8ff"><label for="radio-bgcolor2" id="bgcolor2">背景色2</label></li>
+        <li><input type="radio" id="radio-bgcolor3" name="radio_bgcolor" value="#000000"><label for="radio-bgcolor3" id="bgcolor3">背景色3</label></li>
+        <!-- <li><a class="link" href="./camera.html">スキャン</a></li> -->
+        <li><a class="link" href="./3dmodels-list.html">所蔵一覧</a></li>
+        <li><a class="link" href="./index.html">Top page</a></li>
+      </ul>
+      <!-- 表示義務は無し
+      <h6>jQueryプラグイン：<a href="http://git.blivesta.com/drawer/">Drawer</a></h6> -->
+      <h6 class="center">All contents copyright (C) kcg.edu.<br>
+        Copyrights Hand's On Museum Inc.<br>
+        All Rights Reserved.</h6>
       </nav>
       <!-- ドロワーメニューここまで -->
 
-
       <script type="text/javascript">
+      // ここからスマホ挙動の調整
+      // "passive" が使えるかどうかを検出 */
+      var passiveSupported = false;
+      try {
+        document.addEventListener("test", null, Object.defineProperty({}, "passive", {
+          get: function() {
+            passiveSupported = true;
+          }
+        }));
+      } catch(err) {}
+      // リスナーを登録
+      document.addEventListener("touchmove", function listener(e) {
+        /* do something */
+        e.preventDefault();
+      }, passiveSupported ? { passive: false } : false);
+      // スマホ画面での挙動調整ここまで
+
       //チェックボックスの複数選択不可化
       $(".checkbox").on("click", function(){
-        $('.checkbox').prop('checked', false);
-        $(this).prop('checked', true);
+        $(".checkbox").prop("checked", false);
+        $(this).prop("checked", true);
+        // 『説明』が押された時のポップアップ表示
+        if($("input[name=radio]:eq(1)").prop("checked")){
+          alert("メーカー：IBM社(米)　製造年：1969年\n使用校舎：洛北校　利用目的：実習用\n● カードパンチシステム\n● 利用言語：FORTRAN,COBOL\n\nIBM社の商用機として一世を風靡したIBM360/40システムが実習用として導入された。現在まで保管されているのは、この機械を含め、世界としても数台のみである。");
+        };
       });
+
 
       //ドロワーメニュー
       $(document).ready(function() {
@@ -117,22 +133,56 @@
       const controls = new THREE.OrbitControls(camera);
 
       //ここから3Dモデル生成のコード
-      //物体1(PC上部1)
+      //物体1(PC本体)
       //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
-      var geometry_1 = new THREE.BoxGeometry( 3.5, 2.5, 3.7);
+      var geometry_1 = new THREE.BoxGeometry( 4, 7, 6);
       var materials_1 =[];
-      materials_1[0] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/rightside-tex.jpg")});
-      materials_1[1] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/leftside-tex.jpg")});
-      materials_1[2] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/upperside-tex.jpg")});
-      materials_1[3] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/underside-tex.jpg")});
-      materials_1[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/frontside-tex.jpg")});
-      materials_1[5] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/behindside-tex.jpg")});
+      materials_1[0] = new THREE.MeshBasicMaterial({color:0x4682B4});
+      materials_1[1] = new THREE.MeshBasicMaterial({color:0x4682B4});
+      materials_1[2] = new THREE.MeshBasicMaterial({color:0x000000});
+      materials_1[3] = new THREE.MeshBasicMaterial({color:0x000000});
+      materials_1[4] = new THREE.MeshBasicMaterial({color:0x000000});
+      materials_1[5] = new THREE.MeshBasicMaterial({color:0x4682B4});
       var material_1 = new THREE.MeshFaceMaterial(materials_1);
       var mesh_1 = new THREE.Mesh( geometry_1, material_1 );
       //表示位置の設定
-      mesh_1.position.set(0,1,0);
+      mesh_1.position.set(0,0,0);
       //シーンに追加
       scene.add(mesh_1);
+
+      //物体2(PC前部から本体)
+      //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
+      var geometry_2 = new THREE.BoxGeometry(3.8, 7.2, 6.1);
+      var materials_2 =[];
+      materials_2[0] = new THREE.MeshBasicMaterial({color:0x000000});
+      materials_2[1] = new THREE.MeshBasicMaterial({color:0x000000});
+      materials_2[2] = new THREE.MeshBasicMaterial({color:0x1E1E20});
+      materials_2[3] = new THREE.MeshBasicMaterial({color:0x000000});
+      materials_2[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-004_m2_5.png")});
+      materials_2[5] = new THREE.MeshBasicMaterial({color:0x000000});
+      var material_2 = new THREE.MeshFaceMaterial(materials_2);
+      var mesh_2 = new THREE.Mesh( geometry_2, material_2 );
+      //表示位置の設定
+      mesh_2.position.set(0,0.05,0.06);
+      //シーンに追加
+      scene.add(mesh_2);
+
+      //物体3(PC上部の看板)
+      //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
+      var geometry_3 = new THREE.BoxGeometry( 3.4, 0.5, 0.2);
+      var materials_3 =[];
+      materials_3[0] = new THREE.MeshBasicMaterial({color:0x272624});
+      materials_3[1] = new THREE.MeshBasicMaterial({color:0x272624});
+      materials_3[2] = new THREE.MeshBasicMaterial({color:0x272624});
+      materials_3[3] = new THREE.MeshBasicMaterial({color:0x000000});
+      materials_3[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-004_m3_5.png")});
+      materials_3[5] = new THREE.MeshBasicMaterial({color:0x272624});
+      var material_3 = new THREE.MeshFaceMaterial(materials_3);
+      var mesh_3 = new THREE.Mesh( geometry_3, material_3 );
+      //表示位置の設定
+      mesh_3.position.set(0,3.9,2.5);
+      // シーンに追加
+      scene.add(mesh_3);
       //ここまでが3Dモデル生成のコード　生成物により変更
 
 
@@ -214,7 +264,6 @@
         })
       })
       //背景色に関する項目ここまで
-
 
       </script>
 

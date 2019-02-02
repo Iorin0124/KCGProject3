@@ -5,171 +5,171 @@
   <!-- 全ての画面サイズには対応できないが、ある程度の規格には対応,縦表示,横表示に応じて画面レイアウトを調整している -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/padding&margin.css">
+  <link rel="stylesheet" href="./css/fontsize-sp.css" media="screen and (max-width:980px)">
+  <link rel="stylesheet" href="./css/fontsize-pc.css" media="screen and (min-width:981px)">
   <link rel="stylesheet" href="./css/3dmodels-list-sp.css" media="screen and (max-width:980px)">
   <link rel="stylesheet" href="./css/3dmodels-list-pc.css" media="screen and (min-width:981px)">
   <script src="./js/jquery-3.1.1.min.js"></script>
-
-</script>
-<title>所蔵一覧</title>
+  <title>所蔵一覧</title>
 </head>
 
 <body>
   <!-- ヘッダー 共通部分ここから -->
   <div id="menu-div" class="pad-01">
-    <h2 class="pad-01 margin-00">KCGコンピュータミュージアム</h2>
+    <span class="pad-01 margin-00 title">京の情報処理技術遺産</span>
   </div>
-  <div id="menu-div">
-    <h3 class="pad-01 margin-00 margintop-01"><a href="./index.html"><i class="fas fa-home padright-01 font-icon" ></i>Top</a>
-      <!-- <a href="./camera.html" class="padleft-02"><i class="fas fa-camera padright-01" ></i>スキャン</a> -->
-      <a href="./reference-book.html" class="padleft-02"><i class="fas fa-book padright-01 font-icon" ></i>参考書籍</a></h3>
+  <div id="menu-div" class="margintop-01">
+    <span class="pad-01 margin-00 margintop-01 h3"><a href="./index.html"><i  class="fas fa-home padright-01 font-icon h3" ></i>Top</a>
+      <!-- <a href="./camera.html" class="padleft-02"><i  class="fas fa-camera padright-01 h3" ></i>スキャン</a> -->
+      <a href="./reference-book.html" class="padleft-02"><i  class="fas fa-book padright-01 font-icon h3" ></i>参考書籍</a></span>
     </div>
     <hr class="margin-00" />
     <!-- 共通部分ここまで -->
 
     <div id="main-div"class="margintop-01">
-      <h2 class="center margin-00 margintop-01">所蔵一覧</h2>
-      <h5 class="pad-01 margin-00 margintop-01 center"><a href="#main">本館</a>
-        <a href="#new" class="padleft-01">新館</a></h5>
+      <p class="center margin-00 margintop-01 h2">所蔵一覧</p>
+      <p class="pad-01 margin-00 margintop-01 center h4"><a href="#main">本館</a>
+        <a href="#new" class="padleft-01">新館</a></p>
       </div>
 
       <!-- アコーディオンメニューここから -->
       <!-- リンク先はダミーデータ　後に差し替え予定 -->
       <i style="padding:5px;"></i>
-      <h3 class="lined margin-00" id="main">本館</h3>
+      <p class="lined margin-00 h3" id="main">本館</p>
       <div class="accordion">
         <dl>
-          <dt><h3 class="center">地下1階</h3></dt>
-          <dd>
-            <ol>
-              <li><a href="./kcg-100.html">UNISYS 2200/402</a></li>
-            </ol>
-            <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
-          </dd>
-        </dl>
-        <dl>
-          <dt><h3 class="center">1階</h3></dt>
-          <dd>
-            <ol>
-              <li><a href="./kcg-101.html">CASIO FP1100</a></li>
-              <li><a href="./kcg-002.html">Dynabook 386</a></li>
-              <li><a href="./kcg-103.html">Dynabook 386/20</a></li>
-              <li><a href="./kcg-104.html">Dynabook EZ</a></li>
-              <li><a href="./kcg-105.html">EX-80</a></li>
-              <li><a href="./kcg-106.html">FM-Towns2-UR</a></li>
-              <li><a href="./kcg-107.html">FM-8</a></li>
-              <li><a href="./kcg-004.html">IBM360</a></li>
-              <li><a href="./kcg-003.html">IBM370/138･158</a></li>
-              <li><a href="./kcg-110.html">IBM3350 ディスク装置</a></li>
-              <li><a href="./kcg-111.html">IF800 model30</a></li>
-              <li><a href="./kcg-112.html">iMac</a></li>
-              <li><a href="./kcg-113.html">IMSAI8080</a></li>
-              <li><a href="./kcg-114.html">J-3100</a></li>
-              <li><a href="./kcg-115.html">Macintosh</a></li>
-              <li><a href="./kcg-116.html">MY-KiT 8816</a></li>
-              <li><a href="./kcg-117.html">MZ-80B</a></li>
-              <li><a href="./kcg-001.html">MZ-80K</a></li>
-              <li><a href="./kcg-119.html">MZ-80K2</a></li>
-              <li><a href="./kcg-120.html">MZ-1500</a></li>
-              <li><a href="./kcg-121.html">NEAC-2206</a></li>
-              <li><a href="./kcg-005.html">OKITAC-4300C</a></li>
-              <li><a href="./kcg-123.html">PASOPIA</a></li>
-              <li><a href="./kcg-124.html">PC8001</a></li>
-              <li><a href="./kcg-125.html">PC9801VM</a></li>
-              <li><a href="./kcg-126.html">PDP-8/I</a></li>
-              <li><a href="./kcg-127.html">PDP-11/05</a></li>
-              <li><a href="./kcg-128.html">PDP-15</a></li>
-              <li><a href="./kcg-129.html">Remington Rand</a></li>
-              <li><a href="./kcg-130.html">SORD M343</a></li>
-              <li><a href="./kcg-131.html">TK-80</a></li>
-              <li><a href="./kcg-132.html">TOSBAC-40</a></li>
-              <li><a href="./kcg-133.html">TOSBAC-1100D</a></li>
-              <li><a href="./kcg-134.html">TOSBAC-1200</a></li>
-              <li><a href="./kcg-135.html">TOSBAC-3400</a></li>
-              <li><a href="./kcg-136.html">VAX-11/780</a></li>
-              <li><a href="./kcg-137.html">カードパンチ機</a></li>
-              <li><a href="./kcg-138.html">タイガー計算機</a></li>
-            </ol>
-            <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
-          </dd>
-        </dl>
-        <dl>
-          <dt><h3 class="center">3階</h3></dt>
-          <dd>
-            <ol>
-              <li><a href="./kcg-139.html">NEAC-1240D</a></li>
-              <li><a href="./kcg-140.html">並列計算機ADENA</a></li>
-            </ol>
-            <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
-          </dd>
-        </dl>
-      </div>
-
-      <i style="padding:5px;"></i>
-      <h3 class="lined margin-00" id="new">新館</h3>
-      <div class="accordion">
-        <dl>
-          <dt><h3 class="center">1階</h3></dt>
-          <dd>
-            <ol>
-              <li><a href="./kcg-141.html">FACOM M -770/6</a></li>
-            </ol>
-            <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
-          </dd>
-        </dl>
-        <dl>
-          <dt><h3 class="center">2階</h3></dt>
-          <dd>
-            <ol>
-              <li><a href="./kcg-142.html">NEAC S-100</a></li>
-            </ol>
-            <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
-          </dd>
-        </dl>
-        <dl>
-          <dt><h3 class="center">3階</h3></dt>
-          <dd>
-            <ol>
-              <li><a href="./kcg-143.html">FACOM 230</a></li>
-              <li><a href="./kcg-144.html">プロリーダシステム</a></li>
-            </ol>
-            <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
-          </dd>
-        </dl>
-      </div>
-      <!-- アコーディオンメニューここまで -->
-
-      <h4 class="center"><a href="#menu-div">このページのトップへ</a></h4>
-
-      <!-- フッター 共通部分ここから -->
-      <div id="menu-div">
-        <h5 class="pad-01 margin-00 margintop-01"><a href="./3dmodels-list.html">プライバシーポリシー</a>
-          <a href="./3dmodels-list.html" class="padleft-02">サイトポリシー</a></h5>
-          <h5 class="pad-01 margin-00 margintop-01"><a href="./3dmodels-list.html">ご利用上の注意</a>
-            <a href="./3dmodels-list.html" class="padleft-02">よくあるご質問</a>
-            <a href="./3dmodels-list.html" class="padleft-02">お問い合わせ</a></h5>
+          <dt><p class="center h4">地下1階</></dt>
+            <dd>
+              <ol>
+                <li><a class="h5" href="./kcg-100.html">UNISYS 2200/402</a></li>
+              </ol>
+              <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
+            </dd>
+          </dl>
+          <dl>
+            <dt><p class="center h4">1階</></dt>
+              <dd>
+                <ol>
+                  <li><a class="h5" href="./kcg-101.html">CASIO FP1100</a></li>
+                  <li><a class="h5" href="./kcg-102.html">Dynabook 386</a></li>
+                  <li><a class="h5" href="./kcg-103.html">Dynabook 386/20</a></li>
+                  <li><a class="h5" href="./kcg-104.html">Dynabook EZ</a></li>
+                  <li><a class="h5" href="./kcg-114.html">Dynabook J-3100</a></li>
+                  <li><a class="h5" href="./kcg-105.html">EX-80</a></li>
+                  <li><a class="h5" href="./kcg-106.html">FM-Towns2-UR</a></li>
+                  <li><a class="h5" href="./kcg-107.html">FM-8</a></li>
+                  <li><a class="h5" href="./kcg-004.html">IBM360</a></li>
+                  <li><a class="h5" href="./kcg-003.html">IBM370/138･158</a></li>
+                  <li><a class="h5" href="./kcg-110.html">IBM3350 ディスク装置</a></li>
+                  <li><a class="h5" href="./kcg-111.html">IF800 model30</a></li>
+                  <li><a class="h5" href="./kcg-112.html">iMac</a></li>
+                  <li><a class="h5" href="./kcg-113.html">IMSAI8080</a></li>
+                  <li><a class="h5" href="./kcg-115.html">Macintosh</a></li>
+                  <li><a class="h5" href="./kcg-116.html">MY-KiT 8816</a></li>
+                  <li><a class="h5" href="./kcg-117.html">MZ-80B</a></li>
+                  <li><a class="h5" href="./kcg-001.html">MZ-80K</a></li>
+                  <li><a class="h5" href="./kcg-119.html">MZ-80K2</a></li>
+                  <li><a class="h5" href="./kcg-120.html">MZ-1500</a></li>
+                  <li><a class="h5" href="./kcg-121.html">NEAC-2206</a></li>
+                  <li><a class="h5" href="./kcg-005.html">OKITAC-4300C</a></li>
+                  <li><a class="h5" href="./kcg-123.html">PASOPIA</a></li>
+                  <li><a class="h5" href="./kcg-124.html">PC8001</a></li>
+                  <li><a class="h5" href="./kcg-125.html">PC9801VM</a></li>
+                  <li><a class="h5" href="./kcg-126.html">PDP-8/I</a></li>
+                  <li><a class="h5" href="./kcg-127.html">PDP-11/05</a></li>
+                  <li><a class="h5" href="./kcg-128.html">PDP-15</a></li>
+                  <li><a class="h5" href="./kcg-129.html">Remington Rand</a></li>
+                  <li><a class="h5" href="./kcg-130.html">SORD M343</a></li>
+                  <li><a class="h5" href="./kcg-131.html">TK-80</a></li>
+                  <li><a class="h5" href="./kcg-132.html">TOSBAC-40</a></li>
+                  <li><a class="h5" href="./kcg-133.html">TOSBAC-1100D</a></li>
+                  <li><a class="h5" href="./kcg-134.html">TOSBAC-1200</a></li>
+                  <li><a class="h5" href="./kcg-135.html">TOSBAC-3400</a></li>
+                  <li><a class="h5" href="./kcg-136.html">VAX-11/780</a></li>
+                  <li><a class="h5" href="./kcg-137.html">カードパンチ機</a></li>
+                  <li><a class="h5" href="./kcg-138.html">タイガー計算機</a></li>
+                </ol>
+                <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
+              </dd>
+            </dl>
+            <dl>
+              <dt><p class="center h4">3階</p></dt>
+              <dd>
+                <ol>
+                  <li><a class="h5" href="./kcg-139.html">NEAC-1240D</a></li>
+                  <li><a class="h5" href="./kcg-140.html">並列計算機ADENA</a></li>
+                </ol>
+                <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
+              </dd>
+            </dl>
           </div>
-          <hr class="margin-00" />
-          <div id="copyrights">
-            <h6 class="margin-00 margintop-01">All contents copyright (C) kcg.edu.<br>
-              Copyrights Io,Mo-KCGProject03 Inc. All Rights Reserved.</h6>
-            </div>
-            <!-- 共通部分ここまで -->
 
-            <script type="text/javascript">
-            <!-- アコーディオンメニューここから -->
-            $(function(){
-              $('.accordion > dl > dt').on('click',function(){
-                var Dopenclass = $(this).attr('class');
-                $(this).next('dd').slideToggle();
-                if(!Dopenclass){
-                  $(this).addClass('dopen');
-                }else{
-                  $(this).removeClass('dopen');
-                }
-              });
-            });
-            <!-- アコーディオンメニューここまで -->
-            </script>
+          <i style="padding:5px;"></i>
+          <p class="lined margin-00 h3" id="new">新館</p>
+          <div class="accordion">
+            <dl>
+              <dt><p class="center h4">1階</p></dt>
+              <dd>
+                <ol>
+                  <li><a class="h5" href="./kcg-141.html">FACOM M -770/6</a></li>
+                </ol>
+                <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
+              </dd>
+            </dl>
+            <dl>
+              <dt><p class="center h4">2階</p></dt>
+              <dd>
+                <ol>
+                  <li><a class="h5" href="./kcg-142.html">NEAC S-100</a></li>
+                </ol>
+                <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
+              </dd>
+            </dl>
+            <dl>
+              <dt><p class="center h3">3階</p></dt>
+              <dd>
+                <ol>
+                  <li><a class="h5" href="./kcg-143.html">FACOM 230</a></li>
+                  <li><a class="h5" href="./kcg-144.html">プロリーダシステム</a></li>
+                </ol>
+                <!-- <img src="./images/map01.png" id="map01" alt="簡易地図"> -->
+              </dd>
+            </dl>
+          </div>
+          <!-- アコーディオンメニューここまで -->
 
-          </body>
-          </html>
+          <p class="center h4"><a href="#menu-div">このページのトップへ</a></p>
+
+          <!-- フッター 共通部分ここから -->
+          <div id="menu-div">
+            <p class="pad-01 margin-00 margintop-01 h5"><a href="./3dmodels-list.html">プライバシーポリシー</a>
+              <a href="./3dmodels-list.html" class="padleft-02">サイトポリシー</a></p>
+              <p class="pad-01 margin-00 margintop-01 h5"><a href="./3dmodels-list.html">ご利用上の注意</a>
+                <a href="./3dmodels-list.html" class="padleft-02">よくあるご質問</a>
+                <a href="./3dmodels-list.html" class="padleft-02">お問い合わせ</a></p>
+              </div>
+              <hr class="margin-00" />
+              <div id="copyrights">
+                <p class="margin-00 margintop-01 h6">All contents copyright (C) kcg.edu.<br>
+                  Copyrights Hand's On Museum Inc. All Rights Reserved.</p>
+                </div>
+                <!-- 共通部分ここまで -->
+
+                <script type="text/javascript">
+                <!-- アコーディオンメニューここから -->
+                $(function(){
+                  $('.accordion > dl > dt').on('click',function(){
+                    var Dopenclass = $(this).attr('class');
+                    $(this).next('dd').slideToggle();
+                    if(!Dopenclass){
+                      $(this).addClass('dopen');
+                    }else{
+                      $(this).removeClass('dopen');
+                    }
+                  });
+                });
+                <!-- アコーディオンメニューここまで -->
+                </script>
+
+              </body>
+              </html>

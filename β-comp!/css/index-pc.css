@@ -1,17 +1,22 @@
 /* TopページのCSS(主にPC) */
 
-/* body{ */
-  /* カラーは後から変更可 */
-  /* background-color: #fff8dc; */
-/* } */
-
-/* 表題 */
-h2{
-  text-align: center;
-}
-
 /* 縦画面 */
 @media screen and (orientation: portrait) {
+  /* 表題用スペース */
+  #title-space{
+    position: fixed;
+    width: 100%;
+    left: 0%;
+    top: 1%;
+  }
+  /* 表題 */
+  #title-div{
+    position: relative;
+    text-align: center;
+  }
+  #title-div > span{
+    font-size: 70px;
+  }
   /* Top画像 */
   #top-img{
     position: fixed;
@@ -32,9 +37,13 @@ h2{
   #admission{
     background-color: #CEF9DC;
     position: static;
+    text-align: center;
     top: 0%;
     padding: 5px;
     border: 2px #08088A solid;
+  }
+  #admission > span{
+    font-size: 60px;
   }
   div.landscape{
     display: none;
@@ -43,6 +52,21 @@ h2{
 
 /* 横画面 */
 @media screen and (orientation: landscape) {
+  /* 表題用スペース */
+  #title-space{
+    position: fixed;
+    width: 100%;
+    left: 0%;
+    top: 1%;
+  }
+  /* 表題 */
+  #title-div{
+    position: relative;
+    text-align: center;
+  }
+  #title-div > span{
+    font-size: 60px;
+  }
   /* Top画像 */
   #top-img{
     position: fixed;
@@ -62,10 +86,14 @@ h2{
   /* 入場ボタン */
   #admission{
     background-color: #CEF9DC;
-    position: static;
+    position: relative;
+    text-align: center;
     top: 0%;
     padding: 0%;
     border: 2px #08088A solid;
+  }
+  #admission > span{
+    font-size: 36px;
   }
   div.portrait{
     display: none;
