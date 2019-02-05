@@ -11,6 +11,23 @@
   vertical-align: middle;
 }
 
+<<<<<<< HEAD
+=======
+/* 横画面 */
+@media screen and (orientation: landscape) {
+  #img-div img{
+    border: solid 1px #08088A;
+    width: 15%
+  }
+}
+/* 縦画面 */
+@media screen and (orientation: portrait) {
+  #img-div img{
+    border: solid 1px #08088A;
+    width: 48%
+  }
+}
+>>>>>>> f932855fef14f8018b4ec59def8e523e77af43c3
 
 
 
