@@ -74,7 +74,7 @@ li input[type=radio]{
 
 /* 画面下の操作説明範囲 */
 #operation-manual{
-  height: 30%;
+  height: 35%;
   width: 100%;
   position:fixed;
   left:0px;
@@ -86,7 +86,7 @@ li input[type=radio]{
 }
 /* 画面下の機種説明範囲 */
 #description{
-  height: 30%;
+  height: 35%;
   width: 100%;
   position:fixed;
   left:0px;

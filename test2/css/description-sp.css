@@ -4,6 +4,7 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 /* Tpoページに戻るアイコンとカメラ画面に戻るアイコン */
 #menu-div img{
   width: 8%;
@@ -16,6 +17,8 @@
 =======
 =======
 >>>>>>> 3686e868e41fb94074835b7cb980c9c223b20e53
+=======
+>>>>>>> 03348645c10d994ec589f22dd345aae85bd515c1
 /* 横画面 */
 @media screen and (orientation: landscape) {
   #img-div img{
@@ -35,9 +38,6 @@
 =======
 
 >>>>>>> 3686e868e41fb94074835b7cb980c9c223b20e53
-
-
-
 
 /* コピーライト */
 #copyrights{

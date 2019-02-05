@@ -6,32 +6,30 @@
   text-align: center;
 }
 
-#main-div{
-  border: dotted 1px #BDBDBD;
-}
-
-#stcol{
-  color: #000066;
-}
-
-.sample {
-        display: flex;
-        align-items: center;
-    }
-    .sample:before, .sample:after {
-        content: "";
-        flex-grow: 1;
-        height: 1px; /* 線の太さを変えたいときはここを変える */
-        background: #000; /* 線の色を変えたいときはここを変える */
-        margin:0 .4em; /* 文字と線の余白用 なくても良い */
-    }
-
 /* Tpoページに戻るアイコンとカメラ画面に戻るアイコン */
 #menu-div img{
   width: 8%;
   display: table-cell inline;
   vertical-align: middle;
 }
+
+/* 題名とページ内リンクの囲い */
+#main-div{
+  border: dotted 1px #BDBDBD;
+}
+
+/* ドロワーメニューの見出し */
+.lined {
+        display: flex;
+        align-items: center;
+    }
+    .lined:before, .lined:after {
+        content: "";
+        flex-grow: 1;
+        height: 1px; /* 線の太さ */
+        background: #000; /* 線の色 */
+        margin:0 .4em; /* 文字と線の余白用(なくても良い) */
+    }
 
 /* 簡易地図 */
 #map01{

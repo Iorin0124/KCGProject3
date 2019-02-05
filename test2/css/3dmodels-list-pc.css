@@ -6,12 +6,24 @@
   text-align: center;
 }
 
-/* Tpoページに戻るアイコンとカメラ画面に戻るアイコン */
-#menu-div img{
-  width: 30px;
-  display: table-cell inline;
-  vertical-align: middle;
+/* 題名とページ内リンクの囲い */
+#main-div{
+  border: dotted 1px #BDBDBD;
 }
+
+/* ドロワーメニューの見出し */
+.lined {
+        display: flex;
+        align-items: center;
+    }
+    .lined:before, .lined:after {
+        content: "";
+        flex-grow: 1;
+        height: 1px; /* 線の太さ */
+        background: #000; /* 線の色 */
+        margin:0 .4em; /* 文字と線の余白用(なくても良い) */
+    }
+
 
 /* 簡易地図 */
 #map01{
@@ -19,7 +31,7 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 60%;
+  width: 75%;
 }
 
 /* コピーライト */
@@ -33,12 +45,15 @@
 h6,hr{
   color: #08088A;
 }
+.hr-02{
+  border: 1px dotted #BDBDBD;
+}
 
 /* ここからアコーディオンメニュー */
 .accordion > dl > dt {
     padding: 0px 10px;
 }
-.accordion > dl > dt, .accordion > dl > dd > ul > ol > li, .accordion > ul > li {
+.accordion > dl > dt, .accordion > dl > dd > ol > li, .accordion > ol > li {
     border-bottom: 1px solid #BDBDBD;
     height: 40px;
     line-height: 40px;
@@ -61,13 +76,13 @@ h6,hr{
     background-color: #D7EEFF;
     display: none;
 }
-.accordion > dl > dt, .accordion > dl > dd > ul > ol > li, .accordion > ol > li {
+.accordion > dl > dt, .accordion > dl > dd > ol > li, .accordion > ol > li {
     border-bottom: 1px solid #BDBDBD;
     height: 40px;
     line-height: 40px;
     position: relative;
 }
-.accordion >dl > dd > ul > ol > li:after {
+.accordion >dl > dd > ol > li:after {
     content: "";
     width: 8px;
     height: 8px;
@@ -81,7 +96,7 @@ h6,hr{
     right: 15px;
     margin: -4px 0px 0px;
 }
-.accordion > dl > dd a, .accordion > ul > ol > li a {
+.accordion > dl > dd a, .accordion > ol > li a {
     display: block;
     padding: 0px 20px;
     box-sizing: border-box;
