@@ -5,7 +5,10 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 4b8fd4ee76d925cc5d609508497e7f7af96bf4d2
 /* Tpoページに戻るアイコンとカメラ画面に戻るアイコン */
 #menu-div img{
   width: 30px;
@@ -20,7 +23,12 @@
 =======
 =======
 >>>>>>> 3686e868e41fb94074835b7cb980c9c223b20e53
+<<<<<<< HEAD
 >>>>>>> 46417f69cd1b8a1ccb72ec8834aeab8a68bb8ad3
+=======
+=======
+>>>>>>> 03348645c10d994ec589f22dd345aae85bd515c1
+>>>>>>> 4b8fd4ee76d925cc5d609508497e7f7af96bf4d2
 /* 横画面 */
 @media screen and (orientation: landscape) {
   #img-div img{
