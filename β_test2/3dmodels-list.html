@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/3dmodels-list-sp.css" media="screen and (max-width:450px)">
   <link rel="stylesheet" href="./css/3dmodels-list-pc.css" media="screen and (min-width:451px)">
   <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/3dmodels-list.js"></script>
 
 </script>
 <title>所蔵一覧</title>
@@ -161,22 +162,6 @@
               Copyrights Io-KCGProject03 Inc. All Rights Reserved.</h6>
             </div>
             <!-- 共通部分ここまで -->
-
-            <script type="text/javascript">
-            <!-- アコーディオンメニューここから -->
-            $(function(){
-              $('.accordion > dl > dt').on('click',function(){
-                var Dopenclass = $(this).attr('class');
-                $(this).next('dd').slideToggle();
-                if(!Dopenclass){
-                  $(this).addClass('dopen');
-                }else{
-                  $(this).removeClass('dopen');
-                }
-              });
-            });
-            <!-- アコーディオンメニューここまで -->
-            </script>
 
           </body>
           </html>
