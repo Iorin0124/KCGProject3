@@ -1,0 +1,105 @@
+<!-- kcg-118 = MZ-80K -->
+<!-- 3DCGモデル表示のあるページの為、実使用は無し -->
+
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/padding&margin.css">
+  <link rel="stylesheet" href="./css/fontsize-sp-android.css" media="screen and (max-width:450px)">
+  <link rel="stylesheet" href="./css/fontsize-sp.css" media="screen and (min-width:451px) and (max-width:980px)">
+  <link rel="stylesheet" href="./css/fontsize-pc.css" media="screen and (min-width:981px)">
+  <link rel="stylesheet" href="./css/description-sp.css" media="screen and (max-width:980px)">
+  <link rel="stylesheet" href="./css/description-pc.css" media="screen and (min-width:981px)">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <title>MZ-80K</title>
+</head>
+
+<body>
+  <!-- ヘッダー 共通部分ここから -->
+  <div id="menu-div" class="pad-01">
+    <span class="pad-01 margin-00 title">京の情報処理技術遺産</span>
+  </div>
+  <div id="menu-div" class="margintop-01">
+    <span class="pad-01 margin-00 margintop-01 h3"><a href="./index.html"><i  class="fas fa-home padright-01 font-icon h3" ></i>Top</a>
+      <!-- <a href="./camera.html" class="padleft-02"><i  class="fas fa-camera padright-01 h3" ></i>スキャン</a> -->
+      <a href="./3dmodels-list.html" class="padleft-02"><i class="fas fa-desktop padright-01 font-icon h3" ></i>所蔵一覧</a></h3>
+    </div>
+    <hr class="margin-00" />
+    <!-- 共通部分ここまで -->
+
+    <!-- カルーセル -->
+    <div class="carousel">
+      <div>
+        <img src="./images/118-1.jpg" alt="PC1" class="margin-auto">
+      </div>
+      <div>
+        <img src="./images/118-2.gif" alt="PC2" class="margin-auto">
+      </div>
+      <div>
+        <img src="./images/118-3.jpg" alt="PC3" class="margin-auto">
+      </div>
+    </div>
+    <hr />
+
+    <!-- 詳細情報 -->
+    <div id="description" class="margin-00">
+      <p class="margin-00">
+        <strong>MZ-80K</strong><br />
+        (情報処理技術遺産2013年3月認定)<br />
+        メーカー：シャープ株式会社<br />
+        製造年：1979年<br />
+        使用校舎：全校舎<br />
+        利用目的：実習用(主にBASIC)<br />
+        <ul>
+          <li>CPU：Z80(米ザイログ社製の8ビットCPU。i8080が基になっている。)</li>
+          <li>クロック数：2MHz</li>
+          <li>メインメモリ：32KB</li>
+          <li>FD：拡張可(外付)</li>
+          <li>OS：FDOS(拡張時)</li>
+        </ul>
+        MZ-80Kは、初期の代表的な8ビットパーソナルコンピュータの機種の一つで、1978年にシャープにより開発され、技術者トレーニング用のセミキットの形で製品化された。
+        オールインワン設計で、本体、ディスプレイ、キーボード、テープレコーダを一体の構造とした。CPUにはZ80を使用、RAMを20KB搭載し、キーボードは角型スイッチをマトリクス状に配列した。
+        ディスプレイは10型CRTで、40×25文字のテキスト、グラフィックキャラクタを使用した80×50ドットのセミグラフィック表示が可能であった。BASICインタプリンターをROMに搭載せずに、
+        カセットテープからRAMに記憶させる方式(「クリーンコンピュータ」方式)を採用し、自社のみならずサードパーティーからも提供されるOSや言語が利用可能であった。
+        プログラムにより時刻表示や3オクターブの音を出すことが可能であった。初期の8ビットパソコン御三家の一つとして人気を博し、後継機とともにMZシリーズを形成した。<br />
+        <br />
+        <a href="https://www.kcg.ac.jp/museum/computer/personal_computers/sharp.html">kcgコンピュータミュージアム：MZ-80K</a><br />
+        <a href="http://museum.ipsj.or.jp/computer/personal/0004.html">情報処理学会 コンピュータ博物館：MZ-80K</a><br />
+        <a href="http://www.sharp.co.jp/">販売メーカー：シャープ</a><br />
+        <a href="reference-book.html">参考書籍：パーソナルコンピュータ博物史</a><br />
+      </p>
+      <br />
+    </div>
+
+    <!-- フッター 共通部分ここから -->
+    <div id="menu-div">
+      <p class="pad-01 margin-00 margintop-01 h5"><a href="./3dmodels-list.html">プライバシーポリシー</a>
+        <a href="./3dmodels-list.html" class="padleft-02">サイトポリシー</a></p>
+        <p class="pad-01 margin-00 margintop-01 h5"><a href="./3dmodels-list.html">ご利用上の注意</a>
+          <a href="./3dmodels-list.html" class="padleft-02">よくあるご質問</a>
+          <a href="./3dmodels-list.html" class="padleft-02">お問い合わせ</a></p>
+        </div>
+        <hr class="margin-00" />
+        <div id="copyrights">
+          <p class="margin-00 margintop-01 h6">All contents copyright (C) kcg.edu.<br>
+            Copyrights Hand's On Museum Inc. All Rights Reserved.</p>
+          </div>
+          <!-- 共通部分ここまで -->
+
+
+          <script type="text/javascript">
+          $(document).ready(function(){
+            $(".carousel").slick({
+              dots: true,
+              arrows: true
+            });
+          });
+          </script>
+
+        </body>
+        </html>

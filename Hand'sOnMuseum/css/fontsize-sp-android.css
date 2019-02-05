@@ -1,0 +1,20 @@
+/* 文字サイズ設定 */
+.title {
+  font-size: 38px;
+}
+.h2{
+  font-size: 30px;
+}
+.h3{
+  font-size: 22px;
+}
+.h4{
+  font-size:18px;
+}
+.h5{
+  font-size:16px;
+}
+.h6{
+  font-size:12px;
+  color: #08088A;
+}

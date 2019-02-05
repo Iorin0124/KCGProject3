@@ -1,0 +1,120 @@
+/*各3Dモデル描画画面のCSS(主に縦画面)*/
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  position: fixed;
+}
+
+/* キャンバスカラー変更に伴っての背景色変更用クラス */
+.bg-cream{
+  background-color: #fff8dc;
+}
+.bg-lightblue{
+  background-color: #f0f8ff;
+}
+.bg-black{
+  background-color: #000000;
+}
+
+/* ドロワーメニュー内のラジオボタン */
+li input[type=radio]{
+  display: none;
+}
+
+/* ドロワーメニュー内のコンテンツ */
+#drawer-space label,a.link{
+  display: block;
+  margin: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid #08088A;
+  border-radius: 5px;
+}
+
+/* ドロワーメニュー内の背景色変更見本(クリーム色) */
+#bgcolor1{
+  color: black;
+  background-color: #fff8dc;
+}
+/* ドロワーメニュー内の背景色変更見本(薄青色) */
+#bgcolor2{
+  color: black;
+  background-color: #f0f8ff;
+}
+/* ドロワーメニュー内の背景色変更見本(黒色) */
+#bgcolor3{
+  color: white;
+  background-color: #000000;
+}
+
+/* 画面上の操作説明ラジオボタン */
+#divspace01{
+  position: fixed;
+  left: 18%;
+  top: 26px;;
+}
+/* 画面上の機種説明ラジオボタン */
+#divspace02{
+  position: fixed;
+  left: 45%;
+  top: 26px;
+}
+/* 画面上の非表示ラジオボタン */
+#divspace03{
+  position: fixed;
+  left: 63%;
+  top: 26px;
+}
+
+/* 画面下の操作説明範囲 */
+#operation-manual{
+  height: 30%;
+  width: 100%;
+  position:fixed;
+  left:0px;
+  bottom: 0px;
+  border-top: 1px gray solid;
+  overflow-y: auto;
+  white-space: normal;
+  visibility: hidden;
+}
+/* 画面下の機種説明範囲 */
+#description{
+  height: 30%;
+  width: 100%;
+  position:fixed;
+  left:0px;
+  bottom: 0px;
+  border-top: 1px gray solid;
+  overflow-y: auto;
+  white-space: normal;
+  visibility: hidden;
+}
+
+/* 背景色が黒に変更された時に各文字色を白にするクラス */
+.whitecoolor{
+  color: white;
+}
+
+/* 画面上の操作説明にチェックが入った場合、画面下に操作説明を出す */
+#divspace01 input[type="radio"]:checked ~ #operation-manual{
+  visibility: visible;
+}
+
+/* 画面上の機種説明にチェックが入った場合、画面下に機種説明を出す */
+#divspace02 input[type="radio"]:checked ~ #description{
+  visibility: visible;
+}
+
+/* jQueryのプラグインDrawerを使用したことを記載(記載義務はない為現在不可視化) */
+h6{
+  position: absolute;
+  bottom: 0px;
+  color: #08088A;
+}
