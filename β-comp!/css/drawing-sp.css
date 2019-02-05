@@ -114,7 +114,7 @@ li input[type=radio]{
 
 /* jQueryのプラグインDrawerを使用したことを記載(記載義務はない為現在不可視化) */
 h6{
-position: absolute;
-bottom: 0px;
-color: #08088A;
+  position: absolute;
+  bottom: 0px;
+  color: #08088A;
 }
