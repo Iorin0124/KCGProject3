@@ -1,0 +1,81 @@
+/* TopページのCSS(主にPC) */
+
+/* body{ */
+  /* カラーは後から変更可 */
+  /* background-color: #fff8dc; */
+/* } */
+
+/* 表題 */
+h2{
+  text-align: center;
+}
+
+/* 縦画面 */
+@media screen and (orientation: portrait) {
+  /* Top画像 */
+  #top-img{
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    left: 0%;
+    top: 8%;
+  }
+  /* 入場用スペース */
+  #admission-space{
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    left: 0%;
+    top: 88%;
+  }
+  /* 入場ボタン */
+  #admission{
+    background-color: #CEF9DC;
+    position: static;
+    top: 0%;
+    padding: 5px;
+    border: 2px #08088A solid;
+  }
+}
+
+/* 横画面 */
+@media screen and (orientation: landscape) {
+  /* Top画像 */
+  #top-img{
+    position: fixed;
+    width: 100%;
+    height: 72%;
+    left: 0%;
+    top: 11%;
+  }
+  /* 入場用スペース */
+  #admission-space{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    left: 0%;
+    top: 83%;
+  }
+  /* 入場ボタン */
+  #admission{
+    background-color: #CEF9DC;
+    position: static;
+    top: 0%;
+    padding: 0%;
+    border: 2px #08088A solid;
+  }
+}
+
+/* フッター用スペース */
+#foot-space{
+  position: fixed;
+  width: 100%;
+  left: 0%;
+  bottom: 0%;
+}
+/* フッター */
+#foot-div{
+  position: relative;
+  color: #08088A;
+  text-align: center;
+}

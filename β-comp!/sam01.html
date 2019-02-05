@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/padding&margin.css">
+  <link rel="stylesheet" href="./css/description-sp.css" media="screen and (max-width:450px)">
+  <link rel="stylesheet" href="./css/description-pc.css" media="screen and (min-width:451px)">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <title>機種名ダミー</title>
+</head>
+<body>
+  <!-- ヘッダー 共通部分ここから -->
+  <div id="menu-div" class="pad-01">
+    <h2 class="pad-01 margin-00">KCGコンピュータミュージアム</h2>
+  </div>
+
+  <div id="menu-div">
+    <h3 class="pad-01 margin-00 margintop-01"><a href="./index.html"><i class="fas fa-home padright-01" ></i>Top</a>
+      <a href="./camera.html" class="padleft-02"><i class="fas fa-camera padright-01" ></i>スキャン</a>
+      <a href="./reference-book.html" class="padleft-02"><i class="fas fa-book padright-01" ></i>参考書籍</a></h3>
+    </div>
+    <hr class="margin-00" />
+    <!-- 共通部分ここまで -->
+
+    <!-- カルーセルテスト実装 -->
+    <div class="carousel">
+      <div>
+        <img src="./images/frontside-img02.jpg" alt="PC前部" class="margin-auto">
+      </div>
+      <div>
+        <img src="./images/behindside-img02.jpg" alt="PC後部" class="margin-auto">
+      </div>
+      <div>
+        <img src="./images/leftside-img02.jpg" alt="PC左横部" class="margin-auto">
+      </div>
+      <div>
+        <img src="./images/rightside-img02.jpg" alt="PC右横部" class="margin-auto">
+      </div>
+      <div>
+        <img src="./images/upperside-img02.jpg" alt="PC上部" class="margin-auto">
+      </div>
+      <div>
+        <img src="./images/underside-img02.jpg" alt="PC下部" class="margin-auto">
+      </div>
+    </div>
+    <hr />
+
+    <div id="description" class="margin-00">
+      <p class="margin-00">発売年：19XX年<br />
+        メーカー：XXXXX　型番：dummy<br />
+        CPU：XXXXXXX　メモリ：最大XXX<br />
+        <br />
+        詳細説明...詳細説明...詳細説明...<br />
+        詳細説明...詳細説明...詳細説明...<br />
+        詳細説明...詳細説明...詳細説明...<br />
+        <br />
+        情報の日時：2017/3/15　<br />
+        <a href="reference-book.html">出典：パーソナルコンピュータ博物史</a><br />
+        <a href="https://www.kcg.ac.jp/museum/computer/personal_computers/XXXXX">kcgコンピュータミュージアム：XXXXX</a><br />
+        <a href="http://museum.ipsj.or.jp/computer/personal/XXXXX">コンピュータ博物館：XXXXX</a><br />
+        <a href="http://XXXXX">販売メーカー：XXXXXへ</a><br />
+        <a href="https://ja.wikipedia.org/wiki/XXXXX">Wikipedia：XXXXX</a>
+      </p>
+      <br />
+    </div>
+
+    <!-- フッター 共通部分ここから -->
+    <div id="menu-div">
+      <h5 class="pad-01 margin-00 margintop-01"><a href="#">プライバシーポリシー</a>
+        <a href="#" class="padleft-02">サイトポリシー</a></h5>
+        <h5 class="pad-01 margin-00 margintop-01"><a href="#">ご利用上の注意</a>
+          <a href="#" class="padleft-02">よくあるご質問</a>
+          <a href="#" class="padleft-02">お問い合わせ</a></h5>
+        </div>
+        <hr class="margin-00" />
+        <div id="copyrights">
+          <h6 class="margin-00 margintop-01">All contents copyright (C) kcg.edu.<br>
+            Copyrights Io-KCGProject03 Inc. All Rights Reserved.</h6>
+          </div>
+          <!-- 共通部分ここまで -->
+
+
+          <script type="text/javascript">
+          $(document).ready(function(){
+            $(".carousel").slick({
+              dots: true
+            });
+          });
+          </script>
+
+        </body>
+        </html>

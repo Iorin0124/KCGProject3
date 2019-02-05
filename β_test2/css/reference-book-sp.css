@@ -1,0 +1,35 @@
+/* ヘッダー,フッター,メニューバー設定 */
+#menu-div{
+  background-color: #DFE5FF;
+  text-align: center;
+}
+
+/* 横画面 */
+@media screen and (orientation: landscape) {
+  #img-div img{
+    border: solid 1px #08088A;
+    width:30%;
+  }
+}
+/* 縦画面 */
+@media screen and (orientation: portrait) {
+  #img-div img{
+    border: solid 1px #08088A;
+    width: 48%;
+  }
+}
+
+
+
+
+/* コピーライト */
+#copyrights{
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+}
+
+/* 罫線,コピーライトのカラー */
+h6,hr{
+  color: #08088A;
+}

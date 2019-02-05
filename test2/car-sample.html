@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <title>カルーセルテスト</title>
+</head>
+<body>
+  <div class='slider-for'>
+    <div>
+      <img src="./images/frontside-img02.jpg" alt="">
+    </div>
+    <div>
+      <img src="./images/behindside-img02.jpg" alt="">
+    </div>
+    <div>
+      <img src="./images/leftside-img02.jpg" alt="">
+    </div>
+    <div>
+      <img src="./images/rightside-img02.jpg" alt="">
+    </div>
+    <div>
+      <img src="./images/upperside-img02.jpg" alt="">
+    </div>
+    <div>
+      <img src="./images/underside-img02.jpg" alt="">
+    </div>
+  </div>
+
+  <div class='slider-nav'>
+    <div>
+      <img src="./images/frontside-img02.jpg" alt="">
+    </div>
+    <div>
+      <img src="./images/behindside-img02.jpg" alt="">
+    </div>
+    <div>
+      <img src="./images/leftside-img02.jpg" alt="">
+    </div>
+    <div>
+      <img src="./images/rightside-img02.jpg" alt="">
+    </div>
+    <div>
+      <img src="./images/upperside-img02.jpg" alt="">
+    </div>
+    <div>
+      <img src="./images/underside-img02.jpg" alt="">
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
+  });
+
+</script>
+
+</body>
+</html>
