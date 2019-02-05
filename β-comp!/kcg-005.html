@@ -21,7 +21,7 @@
 <body class="drawer drawer--left">
 
   <!-- 操作説明 -->
-  <h3 id="title" class="margin-00 center padleft-01 bg-cream">京の情報処理技術遺産</h3>
+  <h3 id="title" class="margin-00 padleft-03 bg-cream">京の情報処理技術遺産</h3>
   <div id="divspace01">
     <input type="radio" class="checkbox" checked="checked" id="radio-manual" name="radio">
     <label id="op_label" for="radio-manual">操作方法</label>
@@ -40,12 +40,12 @@
       <label id="desc_label" for="radio-description">説明</label>
       <div id="description">
         <p><strong>OKITAC-4300C</strong><br />
-          XXXXXXXXXXXXX<br />
-          XXXXXXXXXXXXX<br />
-          <a href="https://www.kcg.ac.jp/museum/computer/mainframe_computers/ibm.html">kcgコンピュータミュージアム：IBM 360/40</a><br />
-          <!-- <a href="http://museum.ipsj.or.jp">情報処理学会 コンピュータ博物館：ページ無し</a><br /> -->
-          <a href="https://www.ibm.com/jp-ja/?lnk=m">メーカー：日本IBM</a><br />
-          <a href="https://www.ibm.com/us-en/?lnk=m">メーカー：IBM United Status</a><br />
+          2009年3月 情報処理技術遺産認定<br />
+          メーカー：沖電気工業株式会社　製造年：1974年<br />
+          使用校舎：洛北校・鴨川校・旧浄土寺校舎<br />
+          <a href="https://www.kcg.ac.jp/museum/computer/mini_computers/oki.html">kcgコンピュータミュージアム：OKITAC-4300C</a><br />
+          <a href="http://museum.ipsj.or.jp/computer/mini/0004.html">情報処理学会 コンピュータ博物館：OKITAC-4300C</a><br />
+          <a href="https://www.oki.com/jp/">販売メーカー：沖電気工業</a><br />
         </p>
       </div>
     </div>
@@ -102,7 +102,7 @@
         $(this).prop("checked", true);
         // 『説明』が押された時のポップアップ表示
         if($("input[name=radio]:eq(1)").prop("checked")){
-          alert("メーカー：IBM社(米)　製造年：1969年\n使用校舎：洛北校　利用目的：実習用\n● カードパンチシステム\n● 利用言語：FORTRAN,COBOL\n\nIBM社の商用機として一世を風靡したIBM360/40システムが実習用として導入された。現在まで保管されているのは、この機械を含め、世界としても数台のみである。");
+          alert("メーカー：沖電気工業株式会社　製造年：1974年\n使用校舎：洛北校・鴨川校・旧浄土寺校舎\n● 科学計算・制御用ミニコンピュータ(語調：16ビット,サイクルタイム：1.5ms)\n● 利用言語：FORTRAN,アセンブリ(SPAⅡ)\n● 主に紙テープ媒体を使用");
         };
       });
 
@@ -135,55 +135,20 @@
       //ここから3Dモデル生成のコード
       //物体1(PC本体)
       //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
-      var geometry_1 = new THREE.BoxGeometry( 4, 7, 6);
+      var geometry_1 = new THREE.BoxGeometry( 7, 5, 3);
       var materials_1 =[];
       materials_1[0] = new THREE.MeshBasicMaterial({color:0x4682B4});
       materials_1[1] = new THREE.MeshBasicMaterial({color:0x4682B4});
-      materials_1[2] = new THREE.MeshBasicMaterial({color:0x000000});
-      materials_1[3] = new THREE.MeshBasicMaterial({color:0x000000});
-      materials_1[4] = new THREE.MeshBasicMaterial({color:0x000000});
+      materials_1[2] = new THREE.MeshBasicMaterial({color:0x1E1E20});
+      materials_1[3] = new THREE.MeshBasicMaterial({color:0x1E1E20});
+      materials_1[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-005_m1_5.png")});
       materials_1[5] = new THREE.MeshBasicMaterial({color:0x4682B4});
       var material_1 = new THREE.MeshFaceMaterial(materials_1);
       var mesh_1 = new THREE.Mesh( geometry_1, material_1 );
       //表示位置の設定
-      mesh_1.position.set(0,0,0);
+      mesh_1.position.set(0,1,0);
       //シーンに追加
       scene.add(mesh_1);
-
-      //物体2(PC前部から本体)
-      //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
-      var geometry_2 = new THREE.BoxGeometry(3.8, 7.2, 6.1);
-      var materials_2 =[];
-      materials_2[0] = new THREE.MeshBasicMaterial({color:0x000000});
-      materials_2[1] = new THREE.MeshBasicMaterial({color:0x000000});
-      materials_2[2] = new THREE.MeshBasicMaterial({color:0x1E1E20});
-      materials_2[3] = new THREE.MeshBasicMaterial({color:0x000000});
-      materials_2[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-004_m2_5.png")});
-      materials_2[5] = new THREE.MeshBasicMaterial({color:0x000000});
-      var material_2 = new THREE.MeshFaceMaterial(materials_2);
-      var mesh_2 = new THREE.Mesh( geometry_2, material_2 );
-      //表示位置の設定
-      mesh_2.position.set(0,0.05,0.06);
-      //シーンに追加
-      scene.add(mesh_2);
-
-      //物体3(PC上部の看板)
-      //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
-      var geometry_3 = new THREE.BoxGeometry( 3.4, 0.5, 0.2);
-      var materials_3 =[];
-      materials_3[0] = new THREE.MeshBasicMaterial({color:0x272624});
-      materials_3[1] = new THREE.MeshBasicMaterial({color:0x272624});
-      materials_3[2] = new THREE.MeshBasicMaterial({color:0x272624});
-      materials_3[3] = new THREE.MeshBasicMaterial({color:0x000000});
-      materials_3[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-004_m3_5.png")});
-      materials_3[5] = new THREE.MeshBasicMaterial({color:0x272624});
-      var material_3 = new THREE.MeshFaceMaterial(materials_3);
-      var mesh_3 = new THREE.Mesh( geometry_3, material_3 );
-      //表示位置の設定
-      mesh_3.position.set(0,3.9,2.5);
-      // シーンに追加
-      scene.add(mesh_3);
-      //ここまでが3Dモデル生成のコード　生成物により変更
 
 
       //レンダラに渡す
