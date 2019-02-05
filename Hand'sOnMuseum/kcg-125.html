@@ -1,0 +1,91 @@
+<!-- kcg-125 = PC9801VM -->
+
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/padding&margin.css">
+  <link rel="stylesheet" href="./css/fontsize-sp-android.css" media="screen and (max-width:450px)">
+  <link rel="stylesheet" href="./css/fontsize-sp.css" media="screen and (min-width:451px) and (max-width:980px)">
+  <link rel="stylesheet" href="./css/fontsize-pc.css" media="screen and (min-width:981px)">
+  <link rel="stylesheet" href="./css/description-sp.css" media="screen and (max-width:980px)">
+  <link rel="stylesheet" href="./css/description-pc.css" media="screen and (min-width:981px)">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <title>PC9801VM</title>
+</head>
+
+<body>
+  <!-- ヘッダー 共通部分ここから -->
+  <div id="menu-div" class="pad-01">
+    <span class="pad-01 margin-00 title">京の情報処理技術遺産</span>
+  </div>
+  <div id="menu-div" class="margintop-01">
+    <span class="pad-01 margin-00 margintop-01 h3"><a href="./index.html"><i  class="fas fa-home padright-01 font-icon h3" ></i>Top</a>
+      <!-- <a href="./camera.html" class="padleft-02"><i  class="fas fa-camera padright-01 h3" ></i>スキャン</a> -->
+      <a href="./3dmodels-list.html" class="padleft-02"><i class="fas fa-desktop padright-01 font-icon h3" ></i>所蔵一覧</a></h3>
+    </div>
+    <hr class="margin-00" />
+    <!-- 共通部分ここまで -->
+
+    <!-- カルーセル -->
+    <div class="carousel">
+      <div>
+        <img src="./images/125-1.gif" alt="PC1" class="margin-auto">
+      </div>
+    </div>
+    <hr />
+
+    <!-- 詳細情報 -->
+    <div id="description" class="margin-00">
+      <p class="margin-00">
+        <strong>PC9801VM</strong><br />
+        メーカー：日本電気株式会社(NEC)<br />
+        製造年：1985年<br />
+        使用校舎：全校舎<br />
+        利用目的：実習用・開発用<br />
+        <ul>
+          <li>CPU：μPD70116(V30)</li>
+          <li>クロック数：10MHz</li>
+          <li>メインメモリ：384KB</li>
+          <li>FD：内蔵可(5インチFD2基)</li>
+        </ul>
+        <br />
+        <a href="https://www.kcg.ac.jp/museum/computer/personal_computers/nec.html">kcgコンピュータミュージアム：PC9801VM</a><br />
+        <a href="http://museum.ipsj.or.jp/computer/personal/0011.html">情報処理学会 コンピュータ博物館：PC9801VM</a><br />
+        <a href="https://jpn.nec.com/">販売メーカー：NEC</a><br />
+        <a href="reference-book.html">参考書籍：パーソナルコンピュータ博物史</a><br />
+      </p>
+      <br />
+    </div>
+
+    <!-- フッター 共通部分ここから -->
+    <div id="menu-div">
+      <p class="pad-01 margin-00 margintop-01 h5"><a href="./3dmodels-list.html">プライバシーポリシー</a>
+        <a href="./3dmodels-list.html" class="padleft-02">サイトポリシー</a></p>
+        <p class="pad-01 margin-00 margintop-01 h5"><a href="./3dmodels-list.html">ご利用上の注意</a>
+          <a href="./3dmodels-list.html" class="padleft-02">よくあるご質問</a>
+          <a href="./3dmodels-list.html" class="padleft-02">お問い合わせ</a></p>
+        </div>
+        <hr class="margin-00" />
+        <div id="copyrights">
+          <p class="margin-00 margintop-01 h6">All contents copyright (C) kcg.edu.<br>
+            Copyrights Hand's On Museum Inc. All Rights Reserved.</p>
+          </div>
+          <!-- 共通部分ここまで -->
+
+
+          <script type="text/javascript">
+          $(document).ready(function(){
+            $(".carousel").slick({
+              dots: true,
+              arrows: true
+            });
+          });
+          </script>
+
+        </body>
+        </html>

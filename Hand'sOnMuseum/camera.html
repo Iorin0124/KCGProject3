@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/camera.css">
+  <title>スキャン</title>
+</head>
+<body>
+  <video id="video" autoplay playsinline="true"></video>
+
+  <script type="text/javascript">
+  var video = document.getElementById('video');
+  var constraints = {
+    audio: false,
+    video: {
+      // スマホのバックカメラを使用
+      facingMode: 'environment'
+    }
+  };
+  //  カメラの映像を取得
+  navigator.mediaDevices.getUserMedia(constraints)
+  .then((stream) => {
+    video.srcObject = stream;
+  })
+  .catch((err) => {
+    window.alert(err.name + ': ' + err.message);
+  });
+
+  //Andoroid Studio使用によりカメラ実装はjavaですることに。
+  //不必要になってしまったページ。
+
+  </script>
+
+
+</body>
+</html>

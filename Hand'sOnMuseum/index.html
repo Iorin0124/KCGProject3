@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <!-- 全ての画面サイズには対応できないが、ある程度の規格には対応,縦表示,横表示に応じて画面レイアウトを調整している -->
+  <link rel="stylesheet" href="./css/padding&margin.css">
+  <link rel="stylesheet" href="./css/index-sp-android.css" media="screen and (max-width:450px)">
+  <link rel="stylesheet" href="./css/index-sp.css" media="screen and (min-width:451px) and (max-width:980px)">
+  <link rel="stylesheet" href="./css/index-pc.css" media="screen and (min-width:981px)">
+  <title>京の情報処理技術遺産</title>
+</head>
+<body>
+  <div id="title-space">
+    <div id="title-div">
+      <span class="margin-00">京の情報処理技術遺産</span>
+    </div>
+  </div>
+
+  <!-- 縦画面用トップ画像 -->
+  <div class="portrait">
+    <!-- トップ画像取得元：https://www.kcg.ac.jp/school_info/history.html -->
+    <a href="3dmodels-list.html">
+      <img src="./images/kcg02.jpg" id="top-img" alt="トップ画像(縦)">
+    </a>
+  </div>
+
+  <!-- 横画面用トップ画像 -->
+  <div class="landscape">
+    <!-- トップ画像取得元：https://www.kcg.ac.jp/school_info/history.html -->
+    <a href="3dmodels-list.html">
+      <img src="./images/kcg01.jpg" id="top-img" alt="トップ画像(横)">
+    </a>
+  </div>
+
+  <!-- トップ画面はシンプルに -->
+  <a href="3dmodels-list.html">
+    <div id="admission-space">
+      <div id="admission">
+        <span class="margin-00"><strong>入場</strong></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- フッターここから -->
+  <div id="foot-space">
+    <!-- 縦画面用フッター -->
+    <div id="foot-div" class="portrait">
+      <span class="margin-00">Powered by Hand's On Museum.</span>
+    </div>
+    <!-- 横画面用フッター -->
+    <div id="foot-div" class="landscape">
+      <sapn class="margin-00">Powered by Hand's On Museum.</span>
+    </div>
+  </div>
+  <!-- フッターここまで -->
+
+  <script type="text/javascript">
+  </script>
+
+</body>
+</html>
