@@ -12,7 +12,10 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 3686e868e41fb94074835b7cb980c9c223b20e53
 /* 横画面 */
 @media screen and (orientation: landscape) {
   #img-div img{
@@ -27,7 +30,11 @@
     width: 48%
   }
 }
+<<<<<<< HEAD
 >>>>>>> f932855fef14f8018b4ec59def8e523e77af43c3
+=======
+
+>>>>>>> 3686e868e41fb94074835b7cb980c9c223b20e53
 
 
 
