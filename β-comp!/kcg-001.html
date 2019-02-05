@@ -1,10 +1,10 @@
-<!--  kcg-001 = MZ-80K (SHARP：パーソナルコンピュータ) -->
+<!--  kcg-001 = MZ-80K (シャープ株式会社：パーソナルコンピュータ) -->
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 全ての画面サイズには対応できないが、ある程度の規格には対応,縦表示,横表示に応じて画面レイアウトを調整している -->
   <link rel="stylesheet" href="./css/padding&margin.css">
   <link rel="stylesheet" href="./css/drawing-sp.css" media="screen and (max-width:450px)">
@@ -15,6 +15,8 @@
   <script src="./js/jquery-3.1.1.min.js"></script>
   <script src="./js/iscroll.js"></script>
   <script src="./js/drawer.min.js"></script>
+
+
   <title>MZ-80K</title>
 </head>
 
@@ -22,87 +24,90 @@
 
   <!-- 操作説明 -->
   <h3 id="title" class="margin-00 center padleft-01 bg-cream">KCGコンピュータミュージアム</h3>
-    <div id="divspace01">
-      <input type="radio" class="checkbox" checked="checked" id="radio-manual">
-      <label id="op_label" for="radio-manual">操作方法</label>
-      <div id="operation-manual">
-        <p>操作方法<br>
-          スクロールで回転<br>
-          ピンチイン,ピンチアウトで拡大縮小<br>
-          左上のメニューアイコンから各種機能へ</p>
-        </div>
+  <div id="divspace01">
+    <input type="radio" class="checkbox" checked="checked" id="radio-manual" name="radio">
+    <label id="op_label" for="radio-manual">操作方法</label>
+    <div id="operation-manual">
+      <p>操作方法<br>
+        スクロールで回転<br>
+        ピンチイン,ピンチアウトで拡大縮小<br>
+        左上のメニューアイコンから各種機能へ</p>
       </div>
+    </div>
 
-      <!-- パソコンの説明 -->
-      <div id="divspace02">
-        <input type="radio" class="checkbox" id="radio-description">
-        <label id="desc_label" for="radio-description">説明</label>
-        <div id="description">
-          <p>発売年：1978年<br />
-            メーカー：SHARP　型番：MZ-80K<br />
-            CPU：LH0080(2MHz)　メモリ：最大48KB<br />
-            <hr />
-            2013年3月 情報処理技術遺産認定<br /><br />
-            〇オールインワンパソコン<br />
-            MZ-80Kは8ビットパーソナルコンピュータである。
-            大きな特徴はCPUボードにディスプレイ,キーボード,データレコーダー(カセットテープ),
-            電源を一体化したオールインワン設計が採用されたことだ。<br />
-            これによりユーザーは周辺機器を買い足さずとも、作成したプログラムをカセットテープに記録したり、
-            ディスプレイに演算結果を表示させることができた。<br /><br />
-            〇クリーンコンピュータ<br />
-            ROMには最低限のコマンドのみを実装し、基本プログラムはカセットテープで供給、起動時にROMに
-            読み込ませる方式を採用した為、改良版や別言語のプログラム供給が簡単となった。<br /><br />
-            〇後継機<br />
-            1979年にMZ-80Cが発売。
-            当時としては大容量の48KBのRAMを搭載し、キーボードがタイプライタ方式に変更されている。<br />
-            1980年にMZ-80K2が発売。
-            これはMZ-80KのRAMを32KBに増やしたものである。<br />
-            1981年にMZ-80K2EとMZ-80Bが発売。
-            MZ-80K2EはMZ-80K2の廉価版で、MZ-80Bは4MHzの高速CPUを搭載した上位版である。
-            <hr />
-            情報の日時：2017/3/15　<br />
-            <a href="reference-book.html">出典：パーソナルコンピュータ博物史</a><br />
-            <a href="https://www.kcg.ac.jp/museum/computer/personal_computers/sharp.html">kcgコンピュータミュージアム：MZ-80K</a><br />
-            <a href="http://museum.ipsj.or.jp/computer/personal/0004.html">コンピュータ博物館：MZ-80K</a><br />
-            <a href="http://www.sharp.co.jp/">販売メーカー：SHARPへ</a><br />
-            <a href="https://ja.wikipedia.org/wiki/MZ-80">Wikipedia：MZ-80K</a>
-          </p>
-        </div>
+    <!-- パソコンの説明 -->
+    <div id="divspace02">
+      <input type="radio" class="checkbox" id="radio-description" name="radio">
+      <label id="desc_label" for="radio-description">説明</label>
+      <div id="description">
+        <p><strong>MZ-80K</strong><br />
+          メーカー：シャープ株式会社　製造年：1978年<br />
+          使用校舎：全校舎　利用目的：実習用(主にBASIC)
+          2013年3月 情報処理技術遺産認定<br />
+          <a href="https://www.kcg.ac.jp/museum/computer/personal_computers/sharp.html">kcgコンピュータミュージアム：MZ-80K</a><br />
+          <a href="http://museum.ipsj.or.jp/computer/personal/0004.html">情報処理学会 コンピュータ博物館：MZ-80K</a><br />
+          <a href="reference-book.html">参考書籍：パーソナルコンピュータ博物史</a><br />
+          <a href="http://www.sharp.co.jp/">販売メーカー：シャープ株式会社</a><br />
+        </p>
       </div>
+    </div>
 
-      <!-- 非表示 -->
-      <div id="divspace03">
-        <input type="radio" class="checkbox" id="radio-hide">
-        <label id="hide_label" for="radio-hide">非表示</label>
-      </div>
+    <!-- 非表示 -->
+    <div id="divspace03">
+      <input type="radio" class="checkbox" id="radio-hide" name="radio">
+      <label id="hide_label" for="radio-hide">非表示</label>
+    </div>
 
-      <!-- ドロワーメニュー -->
-      <button type="button" class="drawer-toggle drawer-hamburger">
-        <span class="sr-only">toggle navigation</span>
-        <span class="drawer-hamburger-icon"></span>
-      </button>
-      <nav class="drawer-nav">
-        <ul class="drawer-menu" id="drawer-space">
-          <li><input type="radio" id="radio-bgcolor1" name="radio_bgcolor" value="#fff8dc" checked="checked"><label for="radio-bgcolor1" id="bgcolor1">背景色1</label></li>
-          <li><input type="radio" id="radio-bgcolor2" name="radio_bgcolor" value="#f0f8ff"><label for="radio-bgcolor2" id="bgcolor2">背景色2</label></li>
-          <li><input type="radio" id="radio-bgcolor3" name="radio_bgcolor" value="#000000"><label for="radio-bgcolor3" id="bgcolor3">背景色3</label></li>
-          <li><a class="link" href="./camera.html">スキャン</a></li>
-          <li><a class="link" href="./3dmodels-list.html">所蔵一覧</a></li>
-        </ul>
-        <!-- 表示義務は無し
-        <h6>jQueryプラグイン：<a href="http://git.blivesta.com/drawer/">Drawer</a></h6> -->
-        <h6 class="center">All contents copyright (C) kcg.edu.<br>
-          Copyrights Io,Mo-KCGProject03 Inc.<br>
-          All Rights Reserved.</h6>
+    <!-- ドロワーメニュー -->
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav">
+      <ul class="drawer-menu" id="drawer-space">
+        <li><input type="radio" id="radio-bgcolor1" name="radio_bgcolor" value="#fff8dc" checked="checked"><label for="radio-bgcolor1" id="bgcolor1">背景色1</label></li>
+        <li><input type="radio" id="radio-bgcolor2" name="radio_bgcolor" value="#f0f8ff"><label for="radio-bgcolor2" id="bgcolor2">背景色2</label></li>
+        <li><input type="radio" id="radio-bgcolor3" name="radio_bgcolor" value="#000000"><label for="radio-bgcolor3" id="bgcolor3">背景色3</label></li>
+        <!-- <li><a class="link" href="./camera.html">スキャン</a></li> -->
+        <li><a class="link" href="./3dmodels-list.html">所蔵一覧</a></li>
+        <li><a class="link" href="./index.html">Top page</a></li>
+      </ul>
+      <!-- 表示義務は無し
+      <h6>jQueryプラグイン：<a href="http://git.blivesta.com/drawer/">Drawer</a></h6> -->
+      <h6 class="center">All contents copyright (C) kcg.edu.<br>
+        Copyrights Io,Mo-KCGProject03 Inc.<br>
+        All Rights Reserved.</h6>
       </nav>
       <!-- ドロワーメニューここまで -->
 
       <script type="text/javascript">
+      // ここからスマホ挙動の調整
+      // "passive" が使えるかどうかを検出 */
+      var passiveSupported = false;
+      try {
+        document.addEventListener("test", null, Object.defineProperty({}, "passive", {
+          get: function() {
+            passiveSupported = true;
+          }
+        }));
+      } catch(err) {}
+      // リスナーを登録
+      document.addEventListener("touchmove", function listener(e) {
+        /* do something */
+        e.preventDefault();
+      }, passiveSupported ? { passive: false } : false);
+      // スマホ画面での挙動調整ここまで
+
       //チェックボックスの複数選択不可化
       $(".checkbox").on("click", function(){
-        $('.checkbox').prop('checked', false);
-        $(this).prop('checked', true);
+        $(".checkbox").prop("checked", false);
+        $(this).prop("checked", true);
+        // 『説明』が押された時のポップアップ表示
+        if($("input[name=radio]:eq(1)").prop("checked")){
+          alert("2013年3月 情報処理技術遺産認定\n\nメーカー：シャープ株式会社　製造年：1979年\n使用校舎：全校舎　利用目的：実習用(主にBASIC)\nCPU：Z80(米ザイログ社製の8ビットCPU。i8080が基になっている。)\nクロック数：2MHz　メインメモリ：32KB\nFD：拡張可(外付)　OS：FDOS(拡張時)\n\nMZ-80Kは、初期の代表的な8ビットパーソナルコンピュータの機種の一つで、1978年にシャープにより開発され、技術者トレーニング用のセミキットの形で製品化された。オールインワン設計で、本体、ディスプレイ、キーボード、テープレコーダを一体の構造とした。CPUにはZ80を使用、RAMを20KB搭載し、キーボードは角型スイッチをマトリクス状に配列した。ディスプレイは10型CRTで、40×25文字のテキスト、グラフィックキャラクタを使用した80×50ドットのセミグラフィック表示が可能であった。BASICインタプリンターをROMに搭載せずに、カセットテープからRAMに記憶させる方式(「クリーンコンピュータ」方式)を採用し、自社のみならずサードパーティーからも提供されるOSや言語が利用可能であった。プログラムにより時刻表示や3オクターブの音を出すことが可能であった。初期の8ビットパソコン御三家の一つとして人気を博し、後継機とともにMZシリーズを形成した。");
+        };
       });
+
 
       //ドロワーメニュー
       $(document).ready(function() {
@@ -132,14 +137,14 @@
       //ここから3Dモデル生成のコード
       //物体1(PC上部1)
       //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
-      var geometry_1 = new THREE.BoxGeometry( 3.5, 2.5, 3.7);
+      var geometry_1 = new THREE.BoxGeometry( 4.2, 3, 4.5);
       var materials_1 =[];
-      materials_1[0] = new THREE.MeshBasicMaterial({color:0xcc0000});
-      materials_1[1] = new THREE.MeshBasicMaterial({color:0xcc0000});
-      materials_1[2] = new THREE.MeshBasicMaterial({color:0xcc0000});
-      materials_1[3] = new THREE.MeshBasicMaterial({color:0xcc0000});
-      materials_1[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_up_5.jpg")});
-      materials_1[5] = new THREE.MeshBasicMaterial({color:0xcc0000});
+      materials_1[0] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m1_1.png")});
+      materials_1[1] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m1_2cp.png")});
+      materials_1[2] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m1_3.png")});
+      materials_1[3] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m1_4.png")});
+      materials_1[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m1_5.png")});
+      materials_1[5] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m1_6.png")});
       var material_1 = new THREE.MeshFaceMaterial(materials_1);
       var mesh_1 = new THREE.Mesh( geometry_1, material_1 );
       //表示位置の設定
@@ -149,18 +154,18 @@
 
       //物体2(PC上部2)
       //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
-      var geometry_2 = new THREE.BoxGeometry( 2.4, 0.8, 3.7);
+      var geometry_2 = new THREE.BoxGeometry(1.8, 1.2, 4.1);
       var materials_2 =[];
-      materials_2[0] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_1.jpg")});
-      materials_2[1] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_2.jpg")});
-      materials_2[2] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_3.jpg")});
-      materials_2[3] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_4.jpg")});
-      materials_2[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_5.jpg")});
-      materials_2[5] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/pc_1_down_6.jpg")});
+      materials_2[0] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m2_6.png")});
+      materials_2[1] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m2_2.png")});
+      materials_2[2] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m2_3.png")});
+      materials_2[3] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m2_4.png")});
+      materials_2[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m2_5.png")});
+      materials_2[5] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m2_6.png")});
       var material_2 = new THREE.MeshFaceMaterial(materials_2);
       var mesh_2 = new THREE.Mesh( geometry_2, material_2 );
       //表示位置の設定
-      mesh_2.position.set(1.7,0.8,-1.3);
+      mesh_2.position.set(2.1,1,-1.1);
       //シーンに追加
       scene.add(mesh_2);
 
@@ -168,16 +173,16 @@
       //メッシュを作成（ジオメトリとマテリアルを元にメッシュを作成）
       var geometry_3 = new THREE.BoxGeometry( 6, 0.8, 6.3);
       var materials_3 =[];
-      materials_3[0] = new THREE.MeshBasicMaterial({color:0xcccc99});
-      materials_3[1] = new THREE.MeshBasicMaterial({color:0xcccc99});
-      materials_3[2] = new THREE.MeshBasicMaterial({color:0xcccc99});
-      materials_3[3] = new THREE.MeshBasicMaterial({color:0xccccc99});
-      materials_3[4] = new THREE.MeshBasicMaterial({color:0xccccc99});
-      materials_3[5] = new THREE.MeshBasicMaterial({color:0xccccc99});
+      materials_3[0] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m3_1.png")});
+      materials_3[1] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m3_2.png")});
+      materials_3[2] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m3_3.png")});
+      materials_3[3] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m3_4.png")});
+      materials_3[4] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m3_5.png")});
+      materials_3[5] = new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture("textures/kcg-001_m3_6.png")});
       var material_3 = new THREE.MeshFaceMaterial(materials_3);
       var mesh_3 = new THREE.Mesh( geometry_3, material_3 );
       //表示位置の設定
-      mesh_1.position.set(-1.2,1.65,-1.3);
+      mesh_1.position.set(-0.9,1.9,-0.9);
       //シーンに追加
       scene.add(mesh_3);
       //ここまでが3Dモデル生成のコード　生成物により変更
@@ -267,13 +272,3 @@
 
     </body>
     </html>
-
-    <!-- 注意事項
-    おそらくGoogleChromeのクロスドメイン制約のせいかと思われるが、
-    GoogleChromeでは3Dモデルに張り付けた画像が表示されない。
-    FirefoxやEdge,IEでは表示される為、そちらでの表示をお願いする。
-    又は、GoogleChromeの設定変更をする(セキュリティを外す設定)と表示されるかと思う。(未確認)
-    また、サーバを立ててそこに画像等を放り込んでやればクロスドメイン制約を受けずに
-    表示されるのではないかという情報もある為、β版テストで実際にやってみる予定である。
-    ==>問題点の解決の為にAndroid Studioを使用することに。
-  -->

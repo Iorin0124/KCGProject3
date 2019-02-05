@@ -1,4 +1,4 @@
-<!--  kcg-003 = IBM370/138･158 (IBM：大型・汎用コンピュータ) -->
+<!--  kcg-004 = IBM360 (IBM：大型・汎用コンピュータ) -->
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -15,7 +15,7 @@
   <script src="./js/jquery-3.1.1.min.js"></script>
   <script src="./js/iscroll.js"></script>
   <script src="./js/drawer.min.js"></script>
-  <title>IBM370/138･158</title>
+  <title>IBM360</title>
 </head>
 
 <body class="drawer drawer--left">
@@ -39,18 +39,19 @@
         <label id="desc_label" for="radio-description">説明</label>
         <div id="description">
           <p>発売年：19XX年<br />
-            メーカー：IBM　型番：IBM370/138<br />
-            CPU：　メモリ：<br />
+            メーカー：東芝　型番：V386/20<br />
+            CPU：i80386SX　メモリ：最大10MB<br />
             <hr />
-            IBM370/138は大型・汎用コンピュータである。<br />
-            ※大型機の為、詳細情報希薄。<br />
+            Dynabook386は持ち運びが可能なラップトップパソコンシリーズである。<br />
+            VGA(640×480ドット)対応液晶ディスプレイを搭載したラップトップパソコン。
+            Dynabookの登場は家庭でのラップトップパソコンが普及するきっかけをつくった。<br />
             <hr />
-            情報の日時：2018/10/15　<br />
-            <a href="https://www.kcg.ac.jp/museum/computer/mainframe_computers/ibm.html">kcgコンピュータミュージアム：IBM370/138</a><br />
-            <a href="https://www.ibm.com/jp-ja/">販売メーカー：IBMへ</a><br />
-            <a href="https://ja.wikipedia.org/wiki/System/370">Wikipedia：System/370</a>
+            情報の日時：2017/3/15<br />
+            <a href="reference-book.html">出典：パーソナルコンピュータ博物史</a><br />
+            <a href="http://museum.ipsj.or.jp/computer/personal/0065.html">コンピュータ博物館：DynaBook V386</a><br />
+            <a href="https://www.toshiba.co.jp/">販売メーカー：東芝へ</a><br />
+            <a href="https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%96%E3%83%83%E3%82%AF_(%E6%9D%B1%E8%8A%9D)">Wikipedia：Dynabookシリーズ</a>
           </p>
-
         </div>
       </div>
 
@@ -133,6 +134,7 @@
       //シーンに追加
       scene.add(mesh_1);
       //ここまでが3Dモデル生成のコード　生成物により変更
+
 
       //レンダラに渡す
       var renderer = new THREE.WebGLRenderer();
